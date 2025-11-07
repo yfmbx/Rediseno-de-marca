@@ -4,18 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Cocacola</title>
+    <title>Coca-Cola</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
-    <header class="navegador">
-        <div id="Cocacola">
-            <a href="imagen/cocacola-marquee.png"></a>
-        </div>
-        <nav id="menu">
-        
+    <header class="menu-header">
+        <a class="logo" href="#">
+            <img src="imagen/logo-cocacola-blanco.png" alt="logo Coca-Cola">
+        </a>
+        <nav class="nav">
+            <ul class="nav-links">
+                <li class="nav-item"><a href="#about">Marcas</a></li>
+
+                <li class="nav-item has-dropdown">
+                    <button class="drop-toggle">Descubre ▾</button>
+                    <ul class="dropdown">
+                        <li>
+                            <a href="#services">Impacto</a>
+                        </li>
+                        <li>
+                            <a href="#service-web">Web</a>
+                        </li>
+                        <li>
+                            <a href="#service-design">Design</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
         </nav>
-    </header>
+  </header>
     <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
         <img src="imagen/cocacola-marquee.png"  alt="cocacola-marquee" />
         <img src="imagen/fanta-marquee.png" alt="Fanta-marquee">
@@ -35,6 +56,9 @@
         <img src="imagen/marerosso-marquee.png" alt="MareRosso-marquee">
         <img src="imagen/limca-marquee.png" alt="Limca-marquee">
     </marquee>
+
+
+    <script src="JS/script.js"></script>
 
 </body>
 </html>
