@@ -52,3 +52,12 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 });
+
+const marquee = document.getElementById('marquee')
+const marqueeContent = document.querySelector('.marquee-content');
+const images = Array.from(marqueeContent.children);
+images.forEach(img => {
+  marqueeContent.appendChild(img.cloneNode(true));
+});
+
+marquee.innerHTML += marquee.innerHTML;

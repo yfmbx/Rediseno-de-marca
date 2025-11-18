@@ -135,3 +135,42 @@ header{
 .drop-toggle {
     list-style: none;
 }
+
+.marquee {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    overflow: hidden;
+    background: #fff;
+    position: relative;
+}
+  
+.marquee-content {
+    display: flex;
+    gap: 15px;
+    animation: scroll 15s linear infinite;
+}
+  
+.marquee-content img {
+    height: 40PX;
+    width: auto;
+    object-fit: contain;
+    margin: 0;
+    padding: 0;
+    display: block;
+    border: none;
+    transition: transform 0.3s ease;
+}
+  
+.marquee-content img:hover {
+    transform: scale(1.1);
+}
+  
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+  
+.marquee:hover .marquee-content {
+    animation-play-state: paused;
+}
