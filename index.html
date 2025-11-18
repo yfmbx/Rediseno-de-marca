@@ -1,64 +1,230 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Coca-Cola</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-</head>
-<body>
-    <header class="menu-header">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Coca-Cola</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    </head>
+    <body>
         <a class="logo" href="#">
             <img src="imagen/logo-cocacola-blanco.png" alt="logo Coca-Cola">
         </a>
-        <nav class="nav">
-            <ul class="nav-links">
-                <li class="nav-item"><a href="#about">Marcas</a></li>
 
-                <li class="nav-item has-dropdown">
-                    <button class="drop-toggle">Descubre ▾</button>
-                    <ul class="dropdown">
-                        <li>
-                            <a href="#services">Impacto</a>
+        <header class="site-header">
+            <nav class="nav" role="navigation" aria-label="Main">
+                    <ul class="nav-links" role="menubar">
+                        <li class="nav-item" role="none">
+                            <a role="menuitem" href="#about">About</a>
                         </li>
-                        <li>
-                            <a href="#service-web">Web</a>
+
+                        <li class="nav-item has-dropdown" role="none">
+                            <div class="dropdown-wrapper">
+                                <button class="drop-toggle">Services ▾</button>
+                                <ul class="dropdown" role="menu">
+                                    <li role="none">
+                                        <a role="menuitem" href="#services">Overview</a>
+                                    </li>
+                                    <li role="none">
+                                        <a role="menuitem" href="#service-web">Web</a>
+                                    </li>
+                                    <li role="none">
+                                        <a role="menuitem" href="#service-design">Design</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
-                        <li>
-                            <a href="#service-design">Design</a>
+
+
+                        <li class="nav-item has-dropdown" role="none">
+                                <button class="drop-toggle" aria-haspopup="true" aria-expanded="false">Portfolio ▾</button>
+                                <ul class="dropdown" role="menu">
+                                <li role="none"><a role="menuitem" href="#portfolio">Latest</a></li>
+                                <li role="none"><a role="menuitem" href="#portfolio-archive">Archive</a></li>
+                                </ul>
                         </li>
+
+
+                        <li class="nav-item" role="none">
+                            <a role="menuitem" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+            </nav>
+        </header>
+
+
+        <main>
+            <section class="hero" id="home">
+                <video id="heroVideo" class="hero-video" autoplay muted loop playsinline poster="img/video-coca-cola.mp4" preload="metadata">
+                <source src="img/video-coca-cola.mp4" type="video/mp4">
+                </video>
+
+
+                <div class="hero-overlay" aria-hidden="false">
+                <h1 class="hero-title">Engaging Headline Here</h1>
+                <p class="hero-sub">A short descriptive subtitle that sits over the video.</p>
+                <div class="hero-ctas">
+                    <a class="btn primary" href="#about">Get Started</a>
+                    <button id="playPauseBtn" class="btn ghost" aria-pressed="false" aria-label="Pause background video">Pause</button>
+                </div>
+                </div>
+            </section>
+
+
+            <section id="about" class="page-section about">
+                <div class="container">
+                <h2>About</h2>
+                <p>This is the About section. Replace with your content.</p>
+                </div>
+            </section>
+
+
+            <section id="services" class="page-section services">
+                <div class="container">
+                <h2>Services</h2>
+                <p>Describe your services here.</p>
+                </div>
+            </section>
+
+
+            <section id="portfolio" class="page-section portfolio">
+                <div class="container">
+                <h2>Portfolio</h2>
+                <p>Showcase your work.</p>
+                </div>
+            </section>
+
+
+            <section id="contact" class="page-section contact">
+                <div class="container">
+                <h2>Contact</h2>
+                <p>Contact details or a simple contact form.</p>
+                </div>
+            </section>
+        </main>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        <script src="JS/script.js"></script>
+
+    </body>
+</html>
+
+
+
+
+
+
+
+
+<!-- <!doctype html>
+<html lang="en">
+  <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Coca-Cola</title>
+        <link rel="stylesheet" href="css/style.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  </head>
+  <body>
+        <a class="logo" href="#">
+            <img src="img/logo-cocacola-blanco.png" alt="logo Coca-Cola">
+        </a>
+        <header class="site-header">
+        <nav class="nav" role="navigation" aria-label="Main">
+            <ul class="nav-links" role="menubar">
+                    <li class="nav-item" role="none">
+                        <a role="menuitem" href="#about">About</a>
+                    </li>
+
+
+                <li class="nav-item has-dropdown" role="none">
+                    <div class="dropdown-wrapper">
+                        <button class="drop-toggle">Services ▾</button>
+                        <ul class="dropdown" role="menu">
+                            <li role="none">
+                                <a role="menuitem" href="#services">Overview</a>
+                            </li>
+                            <li role="none">
+                                <a role="menuitem" href="#service-web">Web</a>
+                            </li>
+                            <li role="none">
+                                <a role="menuitem" href="#service-design">Design</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+
+                <li class="nav-item has-dropdown" role="none">
+                    <button class="drop-toggle" aria-haspopup="true" aria-expanded="false">Portfolio ▾</button>
+                    <ul class="dropdown" role="menu">
+                        <li role="none"><a role="menuitem" href="#portfolio">Latest</a></li>
+                        <li role="none"><a role="menuitem" href="#portfolio-archive">Archive</a></li>
                     </ul>
                 </li>
 
-                <li class="nav-item">
-                    <a href="#contact">Contact</a>
+
+                <li class="nav-item" role="none">
+                    <a role="menuitem" href="#contact">Contact</a>
                 </li>
             </ul>
         </nav>
-  </header>
-    <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
-        <img src="imagen/cocacola-marquee.png"  alt="cocacola-marquee" />
-        <img src="imagen/fanta-marquee.png" alt="Fanta-marquee">
-        <img src="imagen/sprite-marquee.png" alt="Sprite-marquee">
-        <img src="imagen/Fuzetea-marquee.png" alt="Fuzetea-marquee">
-        <img src="imagen/Aquarius-marquee.png" alt="Aquarius-marquee">
-        <img src="imagen/powerade-marquee.png" alt="Powerade-marquee">
-        <img src="imagen/royalbliss-marquee.png" alt="RoyalBliss-marquee">
-        <img src="imagen/bodyarmour-marquee.png" alt="Bodyarmor-marquee">
-        <img src="imagen/jackdaniels-marquee.png" alt="JackDaniels-marquee">
-        <img src="imagen/nordicmist-marquee.png" alt="NordicMist-marquee">
-        <img src="imagen/appletiser-marquee.png" alt="Appletiser-marquee">
-        <img src="imagen/minutemaid-marquee.png" alt="MinuteMaid-marquee">
-        <img src="imagen/aquabona-marquee.png" alt="Aquabona-marquee">
-        <img src="imagen/vilasdelturbon-marquee.png" alt="VilasDelTurbon-marquee">
-        <img src="imagen/kristal-marquee.png" alt="Kristal-marquee">
-        <img src="imagen/marerosso-marquee.png" alt="MareRosso-marquee">
-        <img src="imagen/limca-marquee.png" alt="Limca-marquee">
-    </marquee>
+        </header>
 
 
-    <script src="JS/script.js"></script>
+        <main>
+        <section class="hero" id="home">
+            <video id="heroVideo" class="hero-video" autoplay muted loop playsinline poster="img/video-coca-cola.mp4" preload="metadata">
+            <source src="img/video-coca-cola.mp4" type="video/mp4">
+            </video>
 
-</body>
-</html>
+
+            <div class="hero-overlay" aria-hidden="false">
+            <h1 class="hero-title">Engaging Headline Here</h1>
+            <p class="hero-sub">A short descriptive subtitle that sits over the video.</p>
+            <div class="hero-ctas">
+                <a class="btn primary" href="#about">Get Started</a>
+                <button id="playPauseBtn" class="btn ghost" aria-pressed="false" aria-label="Pause background video">Pause</button>
+            </div>
+            </div>
+        </section>
+
+
+        <section id="about" class="page-section about">
+            <div class="container">
+            <h2>About</h2>
+            <p>This is the About section. Replace with your content.</p>
+            </div>
+        </section>
+
+
+        <section id="services" class="page-section services">
+            <div class="container">
+            <h2>Services</h2>
+            <p>Describe your services here.</p>
+            </div>
+        </section>
+
+
+        <section id="portfolio" class="page-section portfolio">
+            <div class="container">
+            <h2>Portfolio</h2>
+            <p>Showcase your work.</p>
+            </div>
+        </section>
+
+
+        <section id="contact" class="page-section contact">
+            <div class="container">
+            <h2>Contact</h2>
+            <p>Contact details or a simple contact form.</p>
+            </div>
+        </section>
+        </main>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        <script src="JS/script.js"></script>
+  </body>
+</html> -->

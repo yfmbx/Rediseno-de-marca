@@ -1,77 +1,54 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Inicializa los desplegables del menú
-    function initDropdowns() {
-        const toggles = document.querySelectorAll('.drop-toggle');
+    const video = document.getElementById('heroVideo');
+    const btn = document.getElementById('playPauseBtn');
 
-        function closeAll() {
-            document.querySelectorAll('.dropdown').forEach(d => {
-                d.style.display = 'none';
-                const btn = d.previousElementSibling;
-                if (btn && btn.classList.contains('drop-toggle')) btn.setAttribute('aria-expanded', 'false');
-            });
-        }
 
-        toggles.forEach(btn => {
-            const container = btn.closest('.has-dropdown') || btn.parentElement;
-            const dropdown = btn.nextElementSibling;
-            if (!dropdown || !dropdown.classList.contains('dropdown')) return;
-
-            // Oculta inicialmente
-            dropdown.style.display = 'none';
-            btn.setAttribute('aria-expanded', 'false');
-
-            function openSelf() {
-                dropdown.style.display = 'block';
-                btn.setAttribute('aria-expanded', 'true');
-            }
-            function closeSelf() {
-                dropdown.style.display = 'none';
-                btn.setAttribute('aria-expanded', 'false');
-            }
-
-            // Click: alterna (y evita que el clic burbujee al document)
-            btn.addEventListener('click', function (e) {
-                e.preventDefault();
-                e.stopPropagation();
-                const isOpen = btn.getAttribute('aria-expanded') === 'true';
-                if (isOpen) {
-                    closeSelf();
-                } else {
-                    closeAll();
-                    openSelf();
-                }
-            });
-
-            // Hover: abrir al pasar el ratón por la palabra
-            btn.addEventListener('mouseenter', function () {
-                closeAll();
-                openSelf();
-            });
-
-            // Mantener abierto si se pasa al dropdown
-            dropdown.addEventListener('mouseenter', function () {
-                // no hacer nada, solo prevenir cierre por mouseleave del container
-            });
-
-            // Cierra al salir del contenedor (botón + dropdown)
-            container.addEventListener('mouseleave', function () {
-                closeSelf();
-            });
-
-            // Evita que clics dentro del dropdown cierren el menú inmediatamente
-            dropdown.addEventListener('click', function (e) {
-                e.stopPropagation();
-            });
-        });
-
-        // Cierra al hacer clic fuera
-        document.addEventListener('click', closeAll);
-
-        // Cierra con Escape
-        document.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape') closeAll();
-        });
+    // If user prefers reduced motion, pause the video and hide the control
+    try {
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        if (video) video.pause();
+        if (btn) btn.style.display = 'none';
+    }
+    } catch (e) {
+    // matchMedia may not be supported; ignore errors
     }
 
-    initDropdowns();
+
+    if (btn) {
+    btn.addEventListener('click', function () {
+        if (!video) return;
+        if (video.paused) {
+        video.play();
+        btn.textContent = 'Pause';
+        btn.setAttribute('aria-pressed', 'false');
+        btn.setAttribute('aria-label', 'Pause background video');
+        } else {
+        video.pause();
+        btn.textContent = 'Play';
+        btn.setAttribute('aria-pressed', 'true');
+        btn.setAttribute('aria-label', 'Play background video');
+        }
+    });
+    }
+
+
+    // Simple dropdown handling for nav (keeps JS minimal)
+    document.querySelectorAll('.nav-item.has-dropdown').forEach(item => {
+    const btn = item.querySelector('.drop-toggle');
+    const menu = item.querySelector('.dropdown');
+    btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        item.classList.toggle('show');
+    });
+    // close when focus leaves
+    item.addEventListener('focusout', (e) => {
+        // if the newly focused element is outside the item, close
+        if (!item.contains(e.relatedTarget)) {
+        item.classList.remove('show');
+        btn.setAttribute('aria-expanded', 'false');
+        }
+    });
+    });
+
 });
