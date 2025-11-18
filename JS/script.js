@@ -53,11 +53,44 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
-const marquee = document.getElementById('marquee')
-const marqueeContent = document.querySelector('.marquee-content');
-const images = Array.from(marqueeContent.children);
-images.forEach(img => {
-  marqueeContent.appendChild(img.cloneNode(true));
+// MARQUEE
+document.addEventListener('DOMContentLoaded', () => {
+  const marquee = document.getElementById('marquee');
+  const marqueeContent = document.querySelector('.marquee-content');
+
+  if (!marqueeContent) {
+    console.error("No existe .marquee-content en el DOM");
+    return;
+  }
+
+  const clone = marqueeContent.cloneNode(true);
+  marquee.appendChild(clone);
 });
 
-marquee.innerHTML += marquee.innerHTML;
+
+// PAGINA MARCA 
+
+$(function() {
+	$(".panes").addClass('magic'); // Compress width of all slides
+	
+	let current_slide = 1; // First slide to display
+	let count_slides = $(".panes > .pane").length;
+	
+	function update_view() {
+		$(".panes > .pane").removeClass('expand'); // Compress expanded slides
+		$(".panes > .pane:nth-child("+current_slide+")").addClass('expand'); // Expand the current slide
+	};
+	
+	// Inicial: primer slide expandido
+	update_view();
+	
+	// Cambiar slide solo al hacer click en la pane (no cuando se hace click en un enlace dentro)
+	$(".panes > .pane").on('click', function(e) {
+		if ($(e.target).closest('a').length) {
+			// si se hizo click en un enlace, dejar que la navegación ocurra normalmente
+			return;
+		}
+		current_slide = $(this).index() + 1;
+		update_view();
+	});
+});

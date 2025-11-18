@@ -12,14 +12,12 @@
 body{
     font-family: Arial, sans-serif;
     margin:0;
-    padding:0;
+    padding:0 0;
     background-color:#f4f4f4;
 }
 
 header{
-    background-color:#35424a;
-    color:#ffffff;
-    padding:20px 0;
+    padding:0 0;
     text-align:center;
 }
 
@@ -30,112 +28,62 @@ header{
   position:fixed;left:0;right:0;top:18px;z-index:40;padding:0;pointer-events:none;
 }
 
-.nav{
-    background:rgba(8,10,15,0.6);
-    backdrop-filter: blur(6px);
-    width: 180px;
-    max-width: 90%;
-    margin: 0.6rem auto;
-    text-align: center;
-    font-size: 0.95rem;
-    line-height: 1.1;
-    transform: translateY(0);
-
-    border-radius:28px;
-    padding:8px 14px;
-    align-items:center;
-    max-width:var(--max-width);
-    pointer-events:auto;
+.logo-img{
+    width: 70px;
+    height: auto;
 }
 
-.logo{
-    position:fixed;
-    left:14px;
-    top:12px;
-    z-index:80;
-    margin:0; 
-    padding:6px 10px;
-    background:rgba(6,8,12,0.6);
-    border-radius:8px;
-    color:#fff;
-    text-decoration:none;
-    font-weight:700;
-}
-
-.logo img{
-    height:40px;
-}
-
-.nav-links{
-    display:flex;
-    gap:8px;
-    align-items:center;
-    list-style:none;
-    margin:0;
-    padding:0
-}
-
-.nav-links a{
-    color:var(--muted);
-    text-decoration:none;
-    padding:6px 8px;
-    border-radius:6px
-}
-
-.nav-links a:hover{
-    color:#fff;
-    background:rgba(255,255,255,0.03)
-}
-
-/* Oculta el menú por defecto */
-.nav-item .dropdown {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: rgba(8, 10, 15, 0.8);
-    backdrop-filter: blur(6px);
-    padding: 10px;
-    border-radius: 10px;
-    margin-top: 8px;
-    flex-direction: column;
-    z-index: 999;
-    padding: 8px 14px;
-    transform: translateX(-50%);
-    list-style: none;
-}
-
-
-/* Al estar activo (.show), el menú aparece */
-.nav-item.show .dropdown {
-    display: flex;
-}
-
-
-.nav-item.has-dropdown {
-    position: relative;
-}
-
-
-.nav-item.has-dropdown:hover .dropdown {
-    display: flex;
-}
-
-/* Estilos de los enlaces del menú */
-.nav-item .dropdown li a {
-    padding: 6px 12px;
+.menu-header {
+    z-index: 1050; /* siempre encima */
+  }
+  
+  
+/* Mostrar dropdown al pasar el ratón */
+.nav-item.dropdown:hover .dropdown-menu {
     display: block;
+    margin-top: 0; /* evita salto */
+  }
+  
+  /* Opcional: cambiar color de los enlaces */
+  .nav-link {
+    color: #fff;
+  }
+  .nav-link:hover {
+    color: #06b6d4;
+  }
+  
+/* .menu-central {
+    background-color: #35424a;
+    color: #fff;
+    border-radius: 20px;
+    gap: 20px;
+    z-index: 1050; /* más alto que modales y otros elementos 
+  }
+  
+.nav-link {
     color: #fff;
 }
-
-.nav-item .dropdown li a:hover {
-    background: rgba(255, 255, 255, 0.1);
+  
+.nav-link:hover,
+.nav-link:focus {
+    color: var(--accent, #06b6d4);
+}
+  
+.dropdown-menu {
+    background-color: #222;
 }
 
-.drop-toggle {
-    list-style: none;
+.dropdown-item {
+    color: #fff;
 }
-
+  
+.dropdown-item:hover {
+    background-color: #06b6d4;
+    color: #000;
+} */
+  
+  
+/* MARQUEE */
 .marquee {
     display: flex;
     align-items: center;
@@ -174,3 +122,107 @@ header{
 .marquee:hover .marquee-content {
     animation-play-state: paused;
 }
+
+/* PAGINA MARCA  */
+/* TARJETAS  */
+
+/* Carrousel */
+div.panes {
+  max-width: none;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  border-radius: 0;
+  font-size: 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+div.panes > div.pane {
+  width: calc(100% / var(--count-slides));
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  transition: all .5s;
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  overflow: hidden;
+}
+
+/* Estado compactado/expandido controlado por clases */
+div.panes.magic > div.pane {
+  width: var(--compacted-width);
+}
+div.panes.magic > div.pane.expand {
+  width: 85%;
+}
+
+/* Forzar compactado cuando no hay clase .magic (opcional) */
+/* div.panes > div.pane { width: var(--compacted-width); } */
+
+/* Forzar html/body a tamaño completo y quitar márgenes */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Contenido */
+div.pane .content {
+  opacity: 0;
+  transform: scale(2);
+  transition: all .5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  background: rgba(0,0,0,.2);
+  color: #fff;
+  backdrop-filter: blur(0px);
+}
+
+div.pane .content h1 {
+  font-size: 40px;
+  margin: 0;
+}
+div.pane .content p {
+  font-size: 14px;
+  max-width: 80%;
+}
+
+/* Botones */
+div.pane .content .buttons button {
+  background: #fff;
+  border: none;
+  color: #000;
+  font-size: 14px;
+  padding: 7px 12px;
+  border-radius: 5px;
+  margin: 5px;
+  transition: all .3s;
+  cursor: pointer;
+}
+div.pane .content .buttons button.flat {
+  background: transparent;
+  color: #fff;
+}
+div.pane .content .buttons button:hover {
+  background: #fff;
+  color: #000;
+  box-shadow: 0 0 15px #fff;
+}
+
+/* Mostrar contenido solo si la pane tiene la clase expand */
+div.pane.expand .content {
+  opacity: 1;
+  transform: scale(1);
+  filter: blur(0px);
+  backdrop-filter: blur(25px);
+}
+
+/* Backgrounds */
+#p1 { background: rgb(0,120,250) url(https://i.imgur.com/uCdoqQ1.png) center/cover no-repeat; }
+#p2 { background: deeppink url(https://cdn.discordapp.com/attachments/561577396759822346/572835279308587008/unknown.png) center/cover no-repeat; }
+#p3 { background: orange url(https://cdn.discordapp.com/attachments/561577396759822346/572844868955537428/unknown.png) center/cover no-repeat; }
+#p4 { background: lime url(https://media.discordapp.net/attachments/541021063170097184/573163476420395018/unknown.png) center/cover no-repeat; }
