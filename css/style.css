@@ -3,6 +3,8 @@
   --muted: #94a3b8;
   --accent: #06b6d4;
   --max-width: 1100px;
+  --count-slides: 4;   /* ajusta al número real */
+  --compacted-width: 5%; /* ancho de cada slide comprimido */
 }
 
 *{
@@ -117,61 +119,50 @@ header{
 
 /* PAGINA MARCA  */
 /* TARJETAS  */
-
-/* Carrousel */
 div.panes {
   max-width: none;
   width: 100vw;
   height: 100vh;
-  margin: 0;
-  border-radius: 0;
-  font-size: 0;
+  display: flex;
   overflow: hidden;
   text-align: center;
 }
 
 div.panes > div.pane {
-  width: calc(100% / var(--count-slides));
   height: 100%;
-  display: inline-block;
   vertical-align: middle;
   transition: all .5s;
   position: relative;
   background-size: cover;
   background-position: center center;
-  overflow: hidden;
+  flex: 0 0 var(--compacted-width); /* ancho compacto */
+  transition: flex-basis .5s;
+
+}
+
+div.panes.magic > .pane {
+  width: var(--compacted-width);
+  height: 100%;
+  transition: flex-basis .5s;
 }
 
 /* Estado compactado/expandido controlado por clases */
-div.panes.magic > div.pane {
-  width: var(--compacted-width);
-}
 div.panes.magic > div.pane.expand {
   width: 85%;
 }
 
-/* Forzar compactado cuando no hay clase .magic (opcional) */
-/* div.panes > div.pane { width: var(--compacted-width); } */
-
-/* Forzar html/body a tamaño completo y quitar márgenes */
-html, body {
-  height: 100%;
-  margin: 0;
-}
-
 /* Contenido */
 div.pane .content {
-  opacity: 0;
-  transform: scale(2);
-  transition: all .5s;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   height: 100%;
+  opacity: 0;
+  transform: scale(1.2);
+  transition: all .5s;
   background: rgba(0,0,0,.2);
   color: #fff;
-  backdrop-filter: blur(0px);
 }
 
 div.pane .content h1 {
@@ -187,7 +178,7 @@ div.pane .content p {
 div.pane .content .buttons button {
   background: #fff;
   border: none;
-  color: #000;
+  color: #e43939;
   font-size: 14px;
   padding: 7px 12px;
   border-radius: 5px;
@@ -209,8 +200,6 @@ div.pane .content .buttons button:hover {
 div.pane.expand .content {
   opacity: 1;
   transform: scale(1);
-  filter: blur(0px);
-  backdrop-filter: blur(25px);
 }
 
 /* Backgrounds */

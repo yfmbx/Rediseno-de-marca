@@ -68,8 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// PAGINA MARCA 
-
+// PAGINA MARCA S - SLIDES EXPANDIBLES
 $(function() {
 	$(".panes").addClass('magic'); // Compress width of all slides
 	
