@@ -225,7 +225,7 @@ div.panes.magic > div.pane {
   width: var(--compacted-width);
 }
 div.panes.magic > div.pane.expand {
-  width: 85%;
+  width: calc(100% - (var(--compacted-width) * (var(--count-slides) - 1)));
 }
 
 /* Contenido interno */
@@ -296,7 +296,7 @@ div.pane .content .extra {
   left: 50%;
   transform: rotate(-90deg) translateX(-50%);
   transform-origin: left top;
-  color: #fff;
+  color: var(--bg);
   font-weight: bold;
   white-space: nowrap;
   pointer-events: none; /* no bloquea clics */
