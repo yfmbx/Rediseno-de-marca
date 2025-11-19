@@ -54,6 +54,20 @@ header{
   background-color: var(--bg);
   border-radius: 20px;
 }
+
+.user-btn .btn {
+  background-color: var(--bg);   
+  color: #fff;
+  border: none;
+  transition: all 0.3s ease;
+  border-radius: 24px;
+}
+
+.user-btn .btn:hover {
+  box-shadow: 0 0 15px rgba(0,0,0,0.7);
+  transform: scale(1.05);
+}
+
   
   
 /* Mostrar dropdown al pasar el ratón */
