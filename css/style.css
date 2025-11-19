@@ -8,22 +8,23 @@
 }
 
 *{
-  box-sizing: border-box
+  box-sizing: border-box;
+  font-family: 'TCCC-UnityHeadline-Medium', cursive;
+  color: #fff;
 }
 
 body{
-  font-family: 'TCCC-UnityHeadline-Medium', cursive;  
   margin: 0;
   padding: 0 0;
   background-color: #2e2e2e;
 }
 
-header{
+header {
   padding: 0 0;
   text-align: center;
 }
 
-.site-header{
+.site-header {
   display: flex;
   justify-content: center;
   background: transparent;
@@ -132,11 +133,13 @@ header{
 .marquee {
   display: flex;
   align-items: center;
-  height: 80px;
+  height: 110px;
   overflow: hidden;
   background: transparent;
   position: relative;
   margin: 100px 0px;
+  transform: rotate(-5deg);
+  background-color: #fff;
 }
   
 .marquee-content {
@@ -146,7 +149,7 @@ header{
 }
   
 .marquee-content img {
-  height: 70px;
+  height: 90px;
   width: auto;
   object-fit: contain;
   margin: 0;
