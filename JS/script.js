@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// PAGINA MARCA 
+// PAGINA cocacola
 
 $(function() {
 	$(".panes").addClass('magic'); // Compress width of all slides
@@ -93,4 +93,33 @@ $(function() {
 		current_slide = $(this).index() + 1;
 		update_view();
 	});
+});
+
+
+// pagina marca
+$(function() {
+  $(".panes").addClass('magic');
+  let current_slide = 1;
+  let count_slides = $(".panes > .pane").length;
+
+  function update_view() {
+    $(".panes > .pane").removeClass('expand');
+    $(".panes > .pane:nth-child("+current_slide+")").addClass('expand');
+  }
+
+  // Inicial: primer slide expandido
+  update_view();
+
+  // Cambiar slide al hacer clic en el pane
+  $(".panes > .pane").on('click', function(e) {
+    if ($(e.target).closest('button').length) return; // no cambiar si clic en botón interno
+    current_slide = $(this).index() + 1;
+    update_view();
+  });
+
+  // Desplegable interno
+  $(".toggle").on("click", function(e) {
+    e.stopPropagation(); // evita que cambie el slide
+    $(this).siblings(".extra").slideToggle();
+  });
 });

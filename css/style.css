@@ -3,6 +3,8 @@
   --muted: #94a3b8;
   --accent: #06b6d4;
   --max-width: 1100px;
+  --count-slides: 5;
+  --compacted-width: 5%;
 }
 
 *{
@@ -147,7 +149,7 @@ header{
   animation-play-state: paused;
 }
 
-/* PAGINA COCACOLA */
+/* marca */
 .section {
   margin: 40px 0;
 }
@@ -193,21 +195,19 @@ header{
   pointer-events: none;
 } */
 
-/* PAGINA MARCA  */
+/* PAGINA cocacola  */
 /* TARJETAS  */
 
-/* Carrousel */
+/* Contenedor principal */
 div.panes {
-  max-width: none;
   width: 100vw;
   height: 100vh;
   margin: 0;
-  border-radius: 0;
-  font-size: 0;
   overflow: hidden;
-  text-align: center;
+  font-size: 0;
 }
 
+/* Cada slide */
 div.panes > div.pane {
   width: calc(100% / var(--count-slides));
   height: 100%;
@@ -220,7 +220,7 @@ div.panes > div.pane {
   overflow: hidden;
 }
 
-/* Estado compactado/expandido controlado por clases */
+/* Estado comprimido/expandido */
 div.panes.magic > div.pane {
   width: var(--compacted-width);
 }
@@ -228,73 +228,99 @@ div.panes.magic > div.pane.expand {
   width: 85%;
 }
 
-/* Forzar compactado cuando no hay clase .magic (opcional) */
-/* div.panes > div.pane { width: var(--compacted-width); } */
-
-/* Forzar html/body a tamaño completo y quitar márgenes */
-html, body {
-  height: 100%;
-  margin: 0;
-}
-
-/* Contenido */
+/* Contenido interno */
 div.pane .content {
   opacity: 0;
-  transform: scale(2);
+  transform: scale(1.2);
   transition: all .5s;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   height: 100%;
-  background: rgba(0,0,0,.2);
-  color: #fff;
-  backdrop-filter: blur(0px);
-}
-
-div.pane .content h1 {
-  font-size: 40px;
-  margin: 0;
-}
-div.pane .content p {
-  font-size: 14px;
-  max-width: 80%;
-}
-
-/* Botones */
-div.pane .content .buttons button {
-  background: #fff;
-  border: none;
-  color: #000;
-  font-size: 14px;
-  padding: 7px 12px;
-  border-radius: 5px;
-  margin: 5px;
-  transition: all .3s;
-  cursor: pointer;
-}
-
-div.pane .content .buttons button.flat {
-  background: transparent;
+  background: rgba(0,0,0,.4);
   color: #fff;
 }
 
-div.pane .content .buttons button:hover {
-  background: #fff;
-  color: #000;
-  box-shadow: 0 0 15px #fff;
-}
-
-/* Mostrar contenido solo si la pane tiene la clase expand */
 div.pane.expand .content {
   opacity: 1;
   transform: scale(1);
-  filter: blur(0px);
-  backdrop-filter: blur(25px);
 }
 
-/* Backgrounds */
-#p1 { background: rgb(0,120,250) url(https://i.imgur.com/uCdoqQ1.png) center/cover no-repeat; }
-#p2 { background: deeppink url(https://cdn.discordapp.com/attachments/561577396759822346/572835279308587008/unknown.png) center/cover no-repeat; }
-#p3 { background: orange url(https://cdn.discordapp.com/attachments/561577396759822346/572844868955537428/unknown.png) center/cover no-repeat; }
-#p4 { background: lime url(https://media.discordapp.net/attachments/541021063170097184/573163476420395018/unknown.png) center/cover no-repeat; }
+/* Imagen */
+div.pane .content img {
+  max-width: 200px;
+  margin-bottom: 15px;
+}
+
+/* Texto */
+div.pane .content h1 {
+  margin: 10px 0;
+}
+div.pane .content p {
+  max-width: 80%;
+  font-size: 14px;
+}
+
+/* Botón desplegable */
+div.pane .content .toggle {
+  background: #fff;
+  border: none;
+  color: #000;
+  padding: 7px 12px;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* Extra desplegable */
+div.pane .content .extra {
+  display: none;
+  margin-top: 10px;
+  background: rgba(255,255,255,0.2);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Colores distintos para cada pane */
+#p1 { background-color: crimson; }
+#p2 { background-color: royalblue; }
+#p3 { background-color: seagreen; }
+#p4 { background-color: orange; }
+#p5 { background-color: purple; }
+
+/* Texto horizontal encima de panes comprimidos */
+.pane .label {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: rotate(-90deg) translateX(-50%);
+  transform-origin: left top;
+  color: #fff;
+  font-weight: bold;
+  white-space: nowrap;
+  pointer-events: none; /* no bloquea clics */
+  opacity: 1;
+  transition: opacity .3s;
+}
+
+/* Ocultar el label cuando el pane está expandido */
+.pane.expand .label {
+  opacity: 0;
+}
+
+/* Contenido interno solo visible expandido */
+.pane .content {
+  opacity: 0;
+  transition: opacity .5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #fff;
+}
+.pane.expand .content {
+  opacity: 1;
+}
+
