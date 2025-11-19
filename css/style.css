@@ -132,7 +132,51 @@ header{
   animation-play-state: paused;
 }
 
+/* PAGINA COCACOLA */
+.section {
+  margin: 40px 0;
+}
 
+.section-title {
+  margin-bottom: 10px;
+}
+
+.scroll-text {
+  max-height: 250px;
+  overflow-y: auto;
+  padding: 15px;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  scrollbar-width: none;   -ms-overflow-style: none;
+}
+
+.scroll-text::-webkit-scrollbar {
+  display: none;
+}
+/* 
+.scroll-text::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  background: linear-gradient(to bottom, transparent);
+  pointer-events: none;
+}
+
+/* Difuminado inferior */
+/* .scroll-text::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  background: linear-gradient(to top, transparent);
+  pointer-events: none;
+} */
 
 /* PAGINA MARCA  */
 /* TARJETAS  */
