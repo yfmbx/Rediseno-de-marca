@@ -100,6 +100,7 @@ header{
   overflow: hidden;
   background: transparent;
   position: relative;
+  margin: 100px 0px;
 }
   
 .marquee-content {
