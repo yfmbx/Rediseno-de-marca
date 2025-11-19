@@ -6,121 +6,113 @@
 }
 
 *{
-    box-sizing:border-box
+  box-sizing: border-box
 }
 
 body{
-    font-family: Arial, sans-serif;
-    margin:0;
-    padding:0 0;
-    background-color:#f4f4f4;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0 0;
+  /* background-color: #f4f4f4; */
 }
 
 header{
-    padding:0 0;
-    text-align:center;
+  padding: 0 0;
+  text-align: center;
 }
 
 .site-header{
-  display:flex;
-  justify-content:center;
-  background:transparent;
-  position:fixed;left:0;right:0;top:18px;z-index:40;padding:0;pointer-events:none;
+  display: flex;
+  justify-content: center;
+  background: transparent;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 18px;
+  z-index: 40;
+  padding: 0;
+  pointer-events: none;
 }
 
 .logo-img{
-    width: 70px;
-    height: auto;
+  width: 70px;
+  height: auto;
 }
 
 .menu-header {
-    z-index: 1050; /* siempre encima */
-  }
+  z-index: 1050; /* siempre encima */
+}
   
   
 /* Mostrar dropdown al pasar el ratón */
 .nav-item.dropdown:hover .dropdown-menu {
-    display: block;
-    margin-top: 0; /* evita salto */
-  }
+  display: block;
+  margin-top: 0; /* evita salto */
+}
   
-  /* Opcional: cambiar color de los enlaces */
-  .nav-link {
-    color: #fff;
-  }
-  .nav-link:hover {
-    color: #06b6d4;
-  }
-  
-/* .menu-central {
-    background-color: #35424a;
-    color: #fff;
-    border-radius: 20px;
-    gap: 20px;
-    z-index: 1050; /* más alto que modales y otros elementos 
-  }
-  
+/* Opcional: cambiar color de los enlaces */
 .nav-link {
-    color: #fff;
-}
-  
-.nav-link:hover,
-.nav-link:focus {
-    color: var(--accent, #06b6d4);
-}
-  
-.dropdown-menu {
-    background-color: #222;
+  color: #fff;
 }
 
-.dropdown-item {
-    color: #fff;
+.nav-link:hover {
+  color: #06b6d4;
+}  
+
+
+
+/* video */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1; /* Esto lo deja detrás del menú y el contenido */
 }
-  
-.dropdown-item:hover {
-    background-color: #06b6d4;
-    color: #000;
-} */
-  
+
+
+
   
 /* MARQUEE */
 .marquee {
-    display: flex;
-    align-items: center;
-    height: 50px;
-    overflow: hidden;
-    background: #fff;
-    position: relative;
+  display: flex;
+  align-items: center;
+  height: 80px;
+  overflow: hidden;
+  background: transparent;
+  position: relative;
 }
   
 .marquee-content {
-    display: flex;
-    gap: 15px;
-    animation: scroll 15s linear infinite;
+  display: flex;
+  gap: 100px;
+  animation: scroll 15s linear infinite;
 }
   
 .marquee-content img {
-    height: 40PX;
-    width: auto;
-    object-fit: contain;
-    margin: 0;
-    padding: 0;
-    display: block;
-    border: none;
-    transition: transform 0.3s ease;
+  height: 70px;
+  width: auto;
+  object-fit: contain;
+  margin: 0;
+  padding: 0;
+  display: block;
+  border: none;
+  transition: transform 0.3s ease;
 }
   
 .marquee-content img:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
   
 @keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
   
 .marquee:hover .marquee-content {
-    animation-play-state: paused;
+  animation-play-state: paused;
 }
 
 /* PAGINA MARCA  */
