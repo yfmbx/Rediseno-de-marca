@@ -246,24 +246,28 @@ div.panes {
   max-width: none;
   width: 100vw;
   height: 100vh;
-  margin: 0;
-  border-radius: 0;
-  font-size: 0;
+  display: flex;
   overflow: hidden;
   text-align: center;
 }
 
 /* Cada slide */
 div.panes > div.pane {
-  width: calc(100% / var(--count-slides));
   height: 100%;
-  display: inline-block;
   vertical-align: middle;
   transition: all .5s;
   position: relative;
   background-size: cover;
   background-position: center center;
-  overflow: hidden;
+  flex: 0 0 var(--compacted-width); /* ancho compacto */
+  transition: flex-basis .5s;
+
+}
+
+div.panes.magic > .pane {
+  width: var(--compacted-width);
+  height: 100%;
+  transition: flex-basis .5s;
 }
 
 /* Estado comprimido/expandido */
@@ -291,9 +295,9 @@ div.pane .content {
   transform: scale(1.2);
   transition: all .5s;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   height: 100%;
   background: rgba(0,0,0,.4);
   color: #fff;
@@ -386,8 +390,6 @@ div.pane .content .toggle {
 div.pane.expand .content {
   opacity: 1;
   transform: scale(1);
-  filter: blur(0px);
-  backdrop-filter: blur(25px);
 }
 
 /* Backgrounds */
