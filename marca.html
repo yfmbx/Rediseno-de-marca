@@ -50,9 +50,15 @@
     </header>
 
     <div class="container-marcas mt-5">
+
+      <h1 class="titulo-marcas">
+        <strong>
+          Nuestras marcas
+        </strong>
+      </h1>
       <!-- Sección 1 -->
       <div class="row section align-items-center">
-        <div class="col-md-6">
+        <div class="seccion-marca col-md-6">
           <!-- Título fuera del scroll -->
           <h3 class="section-title">Título Sección 1</h3>
           <div class="scroll-text">
@@ -80,15 +86,15 @@
           </div>
         </div>
 
-        <div class="col-md-6 text-center">
-          <img src="https://via.placeholder.com/400x250" class="img-fluid" alt="Imagen derecha">
+        <div class="img-marcas col-md-6 text-center">
+          <img src="imagen/coca-cola-marcas.png" class="img-fluid" alt="Imagen derecha">
         </div>
       </div>
 
       <!-- Sección 2 -->
       <div class="row section align-items-center">
-        <div class="col-md-6 text-center">
-          <img src="https://via.placeholder.com/400x250" class="img-fluid" alt="Imagen izquierda">
+        <div class="img-marcas col-md-6 text-center">
+          <img src="imagen/fanta-marcas.png" class="img-fluid" alt="Imagen izquierda">
         </div>
         <div class="col-md-6">
           <h3 class="section-title">Título Sección 2</h3>
@@ -117,6 +123,42 @@
           </div>
         </div>
       </div>
+
+      <!-- Sección 3 -->
+      <div class="row section align-items-center">
+        <div class="seccion-marca col-md-6">
+          <!-- Título fuera del scroll -->
+          <h3 class="section-title">Título Sección 1</h3>
+          <div class="scroll-text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+            <p>Más texto que se puede scrollear dentro del mismo contenedor sin mover el título.</p>
+            <p>Contenido adicional para probar el scroll...</p>
+            <p>Contenido adicional para probar el scroll...</p>
+            <p>Contenido adicional para probar el scroll...</p>
+          </div>
+
+          <!-- Desplegable al final -->
+          <div class="accordion mt-3" id="accordion1">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading1">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+                  Más información
+                </button>
+              </h2>
+              <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#accordion1">
+                <div class="accordion-body">
+                  Aquí puedes poner contenido extra que se despliega al final del scroll.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="img-marcas col-md-6 text-center">
+          <img src="imagen/coca-cola-marcas.png" class="img-fluid" alt="Imagen derecha">
+        </div>
+      </div>
+
 
     </div>
 

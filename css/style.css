@@ -283,15 +283,37 @@ header {
   height: 100%;
   object-fit: cover;
 }
+
+
 /* marca */
 .container-marcas {
-  margin-top: 5em; /* solo arriba */
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 50px;
+  gap: 500px;
+}
+
+.container-marcas img {
+  max-width: 400px;
+  height: auto;
+}
+
+.section {
+  margin-bottom: 80px;
+}
+
+.titulo-marcas {
+  margin-top: 40px;
+  margin-bottom: 70px;
+  font-size: 2.5rem;
+  color: var(--rojo-cocacola);
+}
+
+.seccion-marca {
   margin-bottom: 100px;
 }
 
-.section-title {
-  margin-bottom: 10px;
-}
+
 
 .scroll-text {
   max-height: 250px;
