@@ -155,7 +155,23 @@ header {
   transform: rotate(-10deg) scale(1.2);
 }
 
+.descubre-btn .btn {
+  background-color: var(--rojo-cocacola);
+  margin-top: 20px;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
 
+.descubre-btn .btn:hover {
+  box-shadow: 0 0 15px rgba(224, 85, 85, 0.7);
+  transform: scale(1.05);
+  background-color: #fff;
+  color: var(--bg);
+}
 
   
 /* MARQUEE */
@@ -261,8 +277,8 @@ header {
 
 .custom-card .card-img-top {
   width: 100%;
-  height:auto;         /* altura fija */
-  object-fit: cover;   /* ajusta la imagen dentro */
+  height:auto;
+  object-fit: cover;
   display: block;
 }
 
@@ -286,13 +302,14 @@ header {
   background-color: #fe001a;
   color: #fff;
   box-shadow: 0 0 15px rgba(255,255,255,0.6);
+  transform: scale(1.1);
 }
 
 .tarjetas .card img
 .tarjetas .carousel-inner img {
   height: 100%;
   object-fit: cover;
-  }
+}
 
 .tarjetas.row {
   display: flex;
@@ -321,6 +338,17 @@ header {
   object-fit: contain !important;  /* que no se recorte */
   width: 100%;
   display: block;
+}
+
+.card-body h5 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 15px;
+}
+
+.card-body p {
+  font-size: 0.8rem;
+  margin-bottom: 15px;
 }
 
 
