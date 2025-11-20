@@ -123,15 +123,12 @@ header {
   color: #fff;
   border-radius: 30px;
 }
-  
-  
-/* Mostrar dropdown al pasar el ratón */
+
 .nav-item.dropdown:hover .dropdown-menu {
   display: block;
-  margin-top: 0; /* evita salto */
+  margin-top: 0;
 }
-  
-/* Opcional: cambiar color de los enlaces */
+
 .nav-link {
   color: #fff;
 }
@@ -140,15 +137,12 @@ header {
   color: #06b6d4;
 }  
 
-
-/* video */
 .video-section {
   width: 100%;
   height: 100vh;
   overflow: hidden;
   position: relative;
 }
-
 
 #bg-video {
   position: absolute;
@@ -160,7 +154,6 @@ header {
   z-index: -1;
 }
 
-/* DESCUBRE */
 .img-lata {
   transform: rotate(10deg);
   transition: transform 0.45s ease;
@@ -200,13 +193,12 @@ header {
   height: 300px;
   overflow: visible;
   gap: -60px;
-  /* white-space: nowrap; */
   margin-top: 50px;
 }
 
 
 .marquee, .marquee-detras {
-  position: absolute;        /* ya no absolute */
+  position: absolute;
   display: flex;
   align-items: center;
   height: 110px;
@@ -356,10 +348,9 @@ header {
   object-fit: cover;
 }
 
-/* 1) Limitar la imagen solo en la tarjeta 2 (la col-md-3) */
 .tarjetas .row .col-md-3 .custom-card > img.card-img-top {
-  height: 200px !important;   /* más baja para dejar sitio al botón */
-  object-fit: contain !important;  /* que no se recorte */
+  height: 200px !important;
+  object-fit: contain !important;
   width: 100%;
   display: block;
 }
@@ -445,9 +436,6 @@ header {
 
 
 /* PAGINA COCA-COLA  */
-/* TARJETAS  */
-
-/* Contenedor principal */
 div.panes {
   max-width: none;
   width: 100vw;
@@ -479,7 +467,6 @@ div.panes.magic > div.pane.expand {
   width: calc(100% - (var(--compacted-width) * (var(--count-slides) - 1)));
 }
 
-/* Forzar html/body a tamaño completo y quitar márgenes */
 html, body {
   height: 100%;
   margin: 0;
@@ -506,8 +493,7 @@ div.pane.expand .content {
   backdrop-filter: blur(0px);
 }
 
-/* 
-Extra desplegable */
+/* Extra desplegable */
 div.pane .content .extra {
   display: none;
   margin-top: 10px;
@@ -521,11 +507,11 @@ div.pane .content .extra {
 /* Imagen */
 div.pane .content img {
   margin-left: 40px;
-  transition: transform 0.4s ease; /* animación suave */
+  transition: transform 0.4s ease;
 }
 
 div.pane .content img:hover {
-  transform: rotate(-8deg) scale(1.05); /* gira y aumenta un poco */
+  transform: rotate(-8deg) scale(1.05);
 }
 
 
@@ -537,9 +523,9 @@ div.pane .content h1 {
 }
 div.pane .content h2 {
   margin: 8px 0;
-  font-size: 22px;       /* tamaño intermedio entre h1 y p */
-  font-weight: 400;      /* menos pesado que h1 */
-  color: #fff;           /* asegúrate de que se vea en el fondo oscuro */
+  font-size: 22px;
+  font-weight: 400;
+  color: #fff;
 }
 
 div.pane .content p {
@@ -582,13 +568,10 @@ div.pane .content .toggle {
   text-align: center;
 }
 
-
-/* Ocultar el label cuando el pane está expandido */
 .pane.expand .label {
   opacity: 0;
 }
 
-/* Mostrar contenido solo si la pane tiene la clase expand */
 div.pane.expand .content {
   opacity: 1;
   transform: scale(1);
@@ -596,7 +579,6 @@ div.pane.expand .content {
   backdrop-filter: blur(25px);
 }
 
-/* Botón + desplegable */
 .toggle-wrapper {
   position: relative;
 }
@@ -604,7 +586,7 @@ div.pane.expand .content {
 .toggle-wrapper .extra {
   display: none;
   position: absolute;
-  top: 110%;   /* justo debajo del botón */
+  top: 110%;
   left: 0;
   background: rgba(255,255,255,0.9);
   color: #000;
@@ -615,44 +597,11 @@ div.pane.expand .content {
   z-index: 10;
 }
 
-/* Colores distintos para cada pane */
 #p1 { background-color: var(--rojo-cocacola) }
 #p2 { background-color: rgb(0, 0, 0); }
 #p3 { background-color: rgb(193, 194, 193); }
 #p4 { background-color: rgb(223, 174, 13); }
 #p5 { background-color: rgb(198, 154, 72); }
-
-
-
-/* Responsive: tablet y móviles */
-@media (max-width: 991.98px) {
-  .container-marcas { padding-top: 76px; }
-  .titulo-marcas { font-size: 1.9rem; }
-  .subtitulo-marcas { font-size: 1rem; }
-}
-
-/* En pantallas pequeñas, apilar columnas y centrar imágenes/texto */
-@media (max-width: 767.98px) {
-  /* Forzar que las columnas ocupen 100% y se apilen */
-  .row.section {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-  }
-
-  .seccion-marca, .img-marcas, .col-md-6 {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-
-  /* Hacer títulos y textos más grandes/legibles en móvil */
-  .section-title { font-size: 1.25rem; text-align: center; margin-bottom: 0.5rem; }
-  .scroll-text { max-height: none; overflow: visible; text-align: justify; }
-  .logo-img { height: 42px; }
-  .container-marcas { padding-top: 72px; padding-left: 1rem; padding-right: 1rem; }
-  .btn-marcas { width: 100%; }
-}
-
 
 /* footer */
 
@@ -854,7 +803,7 @@ div.pane.expand .content {
   .footer-content {
     margin: 0 auto;
     max-width: 1230px;
-    padding: 40px 15px 1050px;
+    padding: 40px 15px;
     position: relative;
   }
 
@@ -885,14 +834,47 @@ div.pane.expand .content {
     max-width: 1230px;
     padding: 40px 15px 1050px;
     position: relative;
+    justify-content: space-between;
   }
 
   .footer-content-column {
-    width: 49.99%;
+    width: 48%;
+    text-align: left;
   }
 
   :root { --nav-height: 72px; }
 }
+
+
+/* Responsive: tablet y móviles */
+@media (max-width: 991.98px) {
+  .container-marcas { padding-top: 76px; }
+  .titulo-marcas { font-size: 1.9rem; }
+  .subtitulo-marcas { font-size: 1rem; }
+}
+
+/* En pantallas pequeñas, apilar columnas y centrar imágenes/texto */
+@media (max-width: 767.98px) {
+  /* Forzar que las columnas ocupen 100% y se apilen */
+  .row.section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .seccion-marca, .img-marcas, .col-md-6 {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Hacer títulos y textos más grandes/legibles en móvil */
+  .section-title { font-size: 1.25rem; text-align: center; margin-bottom: 0.5rem; }
+  .scroll-text { max-height: none; overflow: visible; text-align: justify; }
+  .logo-img { height: 42px; }
+  .container-marcas { padding-top: 72px; padding-left: 1rem; padding-right: 1rem; }
+  .btn-marcas { width: 100%; }
+}
+
 
 /* DESKTOP: desde 992px */
 @media (min-width: 992px) {
@@ -914,6 +896,7 @@ div.pane.expand .content {
   :root { --nav-height: 72px; }
 }
 
+
 /* Ajustes generales */
 .container-marcas,
 .descubre-container,
@@ -922,3 +905,4 @@ div.pane.expand .content {
 .pg-footer {
   margin-top: 0;
 }
+
