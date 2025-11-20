@@ -203,6 +203,57 @@ header {
 }
 
 
+/* Tarjetas homepage */
+
+.tarjetas {
+  justify-content: center;
+}
+
+.custom-card {
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+}
+
+.custom-card .card-img-top {
+  height: 250px;
+  object-fit: cover;
+}
+
+.custom-card .card-body {
+  text-align: center;
+  background: linear-gradient(135deg, #fe001a, #ff4d6d);
+  color: #fff;
+  padding: 20px;
+}
+
+.custom-card .btn {
+  background-color: #fff;
+  color: #fe001a;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.custom-card .btn:hover {
+  background-color: #fe001a;
+  color: #fff;
+  box-shadow: 0 0 15px rgba(255,255,255,0.6);
+}
+
+
+
+
+
+
 /* marca */
 .section {
   margin: 40px 0;
