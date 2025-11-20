@@ -19,6 +19,7 @@ body{
   margin: 0;
   padding: 0 0;
   background-color: #2e2e2e;
+  cursor: auto;
 }
 
 .cursor {
@@ -30,6 +31,7 @@ body{
   pointer-events: none;
   transform: translate(-50%, -50%);
   box-shadow: #ffffff45 0 0 8px 2px;
+  z-index: 9999;
 }
 
 header {
@@ -58,7 +60,7 @@ header {
 }
 
 .menu-header {
-  z-index: 9999;
+  z-index: 9997;
   position: fixed;
   pointer-events: auto;
   top: 0;
@@ -489,12 +491,12 @@ div.pane .content .toggle {
 /* Texto horizontal encima de panes comprimidos */
 .pane .label {
   position: absolute;
-  top: 30%;
+  bottom: 30%;
   padding-right: 60px ;
   writing-mode: vertical-rl;
   direction: rtl;
   transform: rotate(180deg) translateX(-50%);
-  transform-origin: left top;
+  transform-origin: left bottom;
   pointer-events: none;
   opacity: 1;
   transition: opacity .3s;
@@ -503,7 +505,7 @@ div.pane .content .toggle {
   white-space: normal;
   word-break: break-word;
   max-height: 20%;
-  text-align: end;
+  text-align: center;
 }
 
 
