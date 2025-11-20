@@ -34,6 +34,19 @@ body{
   z-index: 9999;
 }
 
+.fondo {
+  position: relative;
+}
+
+.img-fondo {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* que se ajuste */
+  z-index: 0;         /* se queda detrás del texto */
+}
+
 header {
   padding: 0 0;
   text-align: center;
@@ -352,11 +365,12 @@ header {
 }
 
 
-/* marca */
+/* marcas */
 .container-marcas {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 50px;
+  padding-top: 50px;
+  padding-bottom: 30px;
   gap: 500px;
 }
 
@@ -371,16 +385,20 @@ header {
 
 .titulo-marcas {
   margin-top: 40px;
-  margin-bottom: 70px;
+  margin-bottom: 40px;
   font-size: 2.5rem;
   color: var(--rojo-cocacola);
+}
+
+.container-marcas h4.subtitulo-marcas {
+  font-size: 1.2rem;
+  color: #ffffffcc;
+  padding-bottom: 40px;
 }
 
 .seccion-marca {
   margin-bottom: 100px;
 }
-
-
 
 .scroll-text {
   max-height: 250px;
@@ -396,6 +414,23 @@ header {
   display: none;
 }
 
+.btn-vermas-marcas .btn-marcas {
+  background-color: var(--rojo-cocacola);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 25px;
+  font-size: 1rem;
+  margin-bottom: 70px;
+  transition: all 0.3s ease;
+}
+
+.btn-vermas-marcas .btn-marcas:hover {
+  box-shadow: 0 0 15px rgba(224, 85, 85, 0.7);
+  transform: scale(1.05);
+  background-color: #fff;
+  color: var(--bg);
+}
 
 
 /* PAGINA COCA-COLA  */
