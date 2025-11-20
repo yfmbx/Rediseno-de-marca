@@ -6,6 +6,7 @@
   --count-slides: 5;
   --compacted-width: 5%;
   --rojo-cocacola: #fe001a
+  var(--nav-height): 72px;
 }
 
 
@@ -817,6 +818,7 @@ div.pane.expand .content {
 
 
 
+/* RESPONSIVE MARCAS */
 /* Pequeñas mejoras para muy pequeños dispositivos */
 @media (max-width: 375px) {
   .titulo-marcas { font-size: 1.6rem; }
@@ -852,15 +854,6 @@ div.pane.expand .content {
     position: relative;
   }
 }
-@media (min-width:801px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */
-
-}
-@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */
-
-}
-@media (min-width:1281px) { /* hi-res laptops and desktops */
-
-}
 
 
 
@@ -883,7 +876,35 @@ div.pane.expand .content {
   }
 }
 @media (min-width: 568px) {
-  /* .footer-content-column {
+  .footer-content-column {
       width: 49.99%;
-  } */
+  }
+}
+
+
+/* RESPONSIVE INDEX */
+@media (max-width: 767.98px) {
+  :root { --nav-height: 72px; }
+  .menu-header .navbar-collapse {
+    background: rgba(0,0,0,0.92);
+    padding: 1rem;
+    margin-top: 0.4rem;
+    border-radius: 8px;
+  }
+  .logo-img { height: 42px; }
+  .navbar-toggler { border-color: rgba(255,255,255,0.15); }
+}
+
+/* Ajustes para tablets/desktop si necesario */
+@media (min-width: 768px) {
+  :root { --nav-height: 72px; }
+}
+
+/* Asegura que secciones principales respeten el padding-top del body */
+.container-marcas,
+.descubre-container,
+.tarjetas,
+.marquee-wrapper,
+.pg-footer {
+  margin-top: 0;
 }
