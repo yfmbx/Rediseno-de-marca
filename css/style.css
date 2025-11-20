@@ -169,6 +169,7 @@ header {
 
 .descubre-btn .btn {
   background-color: var(--rojo-cocacola);
+  font-family: 'Montserrat', sans-serif;
   margin-top: 20px;
   color: #fff;
   border: none;
@@ -414,6 +415,12 @@ header {
 
 .scroll-text::-webkit-scrollbar {
   display: none;
+}
+
+.scroll-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--muted);
 }
 
 .btn-vermas-marcas .btn-marcas {
@@ -768,6 +775,7 @@ div.pane.expand .content {
 .footer-copyright-link {
   color: #fff;
   text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
 }
 
 
@@ -869,10 +877,22 @@ div.pane.expand .content {
 
   /* Hacer títulos y textos más grandes/legibles en móvil */
   .section-title { font-size: 1.25rem; text-align: center; margin-bottom: 0.5rem; }
-  .scroll-text { max-height: none; overflow: visible; text-align: justify; }
-  .logo-img { height: 42px; }
-  .container-marcas { padding-top: 72px; padding-left: 1rem; padding-right: 1rem; }
-  .btn-marcas { width: 100%; }
+  .scroll-text { 
+    max-height: none; 
+    overflow: visible; 
+    text-align: justify; 
+  }
+  .logo-img { 
+    height: 42px; 
+  }
+  .container-marcas { 
+    padding-top: 72px; 
+    padding-left: 1rem; 
+    padding-right: 1rem; 
+  }
+  .btn-marcas { 
+    width: 100%; 
+  }
 }
 
 
