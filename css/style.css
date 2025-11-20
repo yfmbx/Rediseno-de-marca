@@ -19,7 +19,7 @@ body{
   margin: 0;
   padding: 0 0;
   background-color: #2e2e2e;
-  cursor: none;
+  cursor: auto;
 }
 
 .cursor {
@@ -31,6 +31,7 @@ body{
   pointer-events: none;
   transform: translate(-50%, -50%);
   box-shadow: #ffffff45 0 0 8px 2px;
+  z-index: 9999;
 }
 
 header {
@@ -59,7 +60,7 @@ header {
 }
 
 .menu-header {
-  z-index: 9999;
+  z-index: 9997;
   position: fixed;
   pointer-events: auto;
   top: 0;
