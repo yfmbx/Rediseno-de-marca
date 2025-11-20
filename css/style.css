@@ -369,6 +369,13 @@ div.pane .content h1 {
   font-size: 40px;
   margin: 0;
 }
+div.pane .content h2 {
+  margin: 8px 0;
+  font-size: 22px;       /* tamaño intermedio entre h1 y p */
+  font-weight: 400;      /* menos pesado que h1 */
+  color: #fff;           /* asegúrate de que se vea en el fondo oscuro */
+}
+
 div.pane .content p {
   font-size: 14px;
   max-width: 80%;
