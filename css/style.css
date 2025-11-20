@@ -124,10 +124,7 @@ header {
   transform: rotate(-10deg) scale(1.2);
 }
 
-.descubre-text-button {
-  gap: 20px;
-  margin-top: 20px;
-}
+
 
   
 /* MARQUEE */
@@ -251,11 +248,31 @@ header {
   box-shadow: 0 0 15px rgba(255,255,255,0.6);
 }
 
+.descubre-text-button {
+  gap: 20px;
+  margin-top: 20px;
+}
 
+.tarjetas.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
 
+.tarjetas .col-md-5
+.tarjetas .col-md-3 {
+  display: flex;
+}
 
+.tarjetas .carousel {
+  flex: 1;
+}
 
-
+.tarjetas .carousel img,
+.tarjetas .card-img-top {
+  height: 100%;
+  object-fit: cover;
+}
 /* marca */
 .section {
   margin: 40px 0;
