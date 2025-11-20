@@ -402,7 +402,7 @@ div.pane .content .toggle {
 /* Texto horizontal encima de panes comprimidos */
 .pane .label {
   position: absolute;
-  top: 20%;
+  top: 30%;
   padding-right: 60px ;
   writing-mode: vertical-rl;
   direction: rtl;
@@ -418,6 +418,7 @@ div.pane .content .toggle {
   max-height: 20%;
   text-align: end;
 }
+
 
 /* Ocultar el label cuando el pane está expandido */
 .pane.expand .label {

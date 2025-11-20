@@ -1,298 +1,337 @@
 <!doctype html>
 <html lang="es">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Carousel Acordeón</title>
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet"> -->
-  <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Coca-Cola</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="imagen/logo-cocacola-blanco.png" type="image/png">
+    <script src="https://c.webfontfree.com/c.js?f=TCCC-UnityHeadline-Medium" type="text/javascript"></script>
+  </head>
+  <body>
+    <header class="menu-header">
+      <div class="container-fluid">
+        <div class="d-flex justify-content-between align-items-center py-2">
+          <a class="logo" href="#">
+            <img class="logo-img" src="imagen/logo-cocacola-blanco.png" alt="logo Coca-Cola">
+          </a>
+          <nav class="menu-central">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#marca">Marcas</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown" aria-expanded="false">Descubre</a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#services">Impacto</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#service-web">Web</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#service-design">Design</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#contact">Contacto</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="user-btn">
+            <button class="btn btn-outline-light">Iniciar Sesión</button>
+          </div>
+        </div>
+      </div>
+    </header>
 
-  <script src="https://c.webfontfree.com/c.js?f=TCCC-UnityHeadline-Medium" type="text/javascript"></script>
 
-</head>
-<body>
-  <div class="panes d-flex">
-    <!-- Slide 1 -->
-    <div class="pane" id="p1">
-      <div class="label">Coca-cola</div>
-      <div class="content container-fluid">
-        <div class="row align-items-center">
-          <div class="col-md-">
-            <img src="imagen/lata-coca-cola.png" alt="Cocacola normal" class="img-fluid w-100 w-md-80">
-          </div>
-        </div>
-        <div class="col-md-8 text-start position-relative">
-          <h1>Coca-Cola Clásica</h1>
-          <h2>Siente el sabor de tu bebida favorita</h2>
-          <p>Corría el año 1886. Lugar: Atlanta (Georgia). Un farmacéutico llamado John Pemberton se propuso crear una bebida que fuera a la vez refrescante y vigorizante. Buscó la mezcla perfecta de ingredientes frescos de todo el mundo hasta que la encontró. Y llamó a esa bebida Coca‑Cola.</p>
-          <p>Se recomienda mantener una alimentación variada y un estilo de vida activo y saludable.</p>
-          <p>Bebida refrescante aromatizada con edulcorantes.</p>
-          <div class="toggle-wrapper d-inline-block position-relative">
-            <button class="toggle btn btn-light">Ver Información Nutricional</button>
-            <div class="extra">
-             <h5>Información Nutricional</h5>
-              <table style="width:100%; color:#000; font-size:11px;">
-                <tr>
-                  <td>Calorías</td>
-                  <td>42 kcal</td>
-                </tr>
-                <tr>
-                  <td>Grasas</td>
-                  <td>0 g</td>
-                </tr>
-                <tr>
-                  <td>Hidratos de carbono</td>
-                  <td>10.6 g</td>
-                </tr>
-                <tr>
-                  <td>Azúcares totales</td>
-                  <td>10.6 g</td>
-                </tr>
-                <tr>
-                  <td>Proteínas</td>
-                  <td>0 g</td>
-                </tr>
-                <tr>
-                  <td>Sal</td>
-                  <td>0 g</td>
-                </tr>
-                <tr>
-                  <td>Ingredientes</td>
-                  <td>Agua carbonatada, azúcar, colorante E‐150d, acidulante ácido fosfórico, aromas naturales y aroma cafeína.</td>
-                </tr>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Slide 2 -->
-     <div class="pane" id="p2">
-      <div class="label">Zero Azúcar</div>
-      <div class="content container-fluid">
-        <div class="row align-items-center">
-          <div class="col-md-">
-            <img src="imagen/lata-coca-cola-sinazucar.png" alt="Cocacola zero azúcar" class="img-fluid w-100 w-md-80">
-          </div>
-        </div>
-        <div class="col-md-8 text-start position-relative">
-          <h1>Coca-Cola Zero</h1>
-          <p>Coca-Cola zero azúcar ofrece el sabor de Coca-Cola sin azúcar, ideal para quienes buscan reducir calorías sin renunciar al sabor de siempre. Lanzada el 21 de junio de 2006, se convirtió en pocos años en uno de los lanzamientos más exitosos de la compañía en España.</p>
-          <p>Se recomienda mantener una alimentación variada y un estilo de vida activo y saludable.</p>
-          <p>Bebida refrescante aromatizada con edulcorantes.</p>
-          <div class="toggle-wrapper d-inline-block position-relative">
-            <button class="toggle btn btn-light">Ver Información Nutricional</button>
-            <div class="extra">
-             <h5>Información Nutricional</h5>
-              <table style="width:100%; color:#000; font-size:11px;">
-                <tr>
-                  <td>Calorías</td>
-                  <td>0.2 kcal</td>
-                </tr>
-                <tr>
-                  <td>Grasas</td>
-                  <td>0 g</td>
-                </tr>
-                <tr>
-                  <td>Hidratos de carbono</td>
-                  <td>0º g</td>
-                </tr>
-                <tr>
-                  <td>Azúcares totales</td>
-                  <td>0 g</td>
-                </tr>
-                <tr>
-                  <td>Proteínas</td>
-                  <td>0 g</td>
-                </tr>
-                <tr>
-                  <td>Sal</td>
-                  <td>0.02 g</td>
-                </tr>
-                <tr>
-                  <td>Ingredientes</td>
-                  <td>Agua carbonatada, colorante E‐150d, acidulante ácido fosfórico, edulcorantes, aromas naturales, aroma cafeína y corrector de acidez: citratos de sodio.
-                  </td>
-                  <tb>Contiene una fuente de fenilalanina.</td>
-                </tr>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Slide 3 -->
-   <div class="pane" id="p3">
-      <div class="label">Light</div>
-      <div class="content container-fluid">
-        <div class="row align-items-center">
-          <div class="col-md-">
-            <img src="imagen/lata-coca-cola-light.png" alt="Cocacola light" class="img-fluid w-100 w-md-80">
-          </div>
-        </div>
-        <div class="col-md-8 text-start position-relative">
-          <h1>Coca-Cola Light</h1>
-          <h2>Sin azúcar. Sin calorías.</h2>
-          <p>Lanzada en España en 1984, es una bebida para quienes buscan un sabor único y atractivo. Surgió en 1982 en EE. UU. como Diet Coke y pronto se expandió internacionalmente. Su éxito se debe a la imagen de la marca, sus campañas publicitarias y, sobre todo, a su poder refrescante y buen sabor, sin aportar calorías.</p>
-          <p>Se recomienda mantener una alimentación variada y un estilo de vida activo y saludable.</p>
-          <p>Bebida refrescante aromatizada con edulcorantes.</p>
-          <div class="toggle-wrapper d-inline-block position-relative">
-            <button class="toggle btn btn-light">Ver Información Nutricional</button>
-            <div class="extra">
-             <h5>Información Nutricional</h5>
-              <table style="width:100%; color:#000; font-size:11px;">
-                <tr>
-                  <td>Calorías</td>
-                  <td>0.2 kcal</td>
-                </tr>
-                <tr>
-                  <td>Grasas</td>
-                  <td>0 g</td>
-                </tr>
-                <tr>
-                  <td>Hidratos de carbono</td>
-                  <td>0º g</td>
-                </tr>
-                <tr>
-                  <td>Azúcares totales</td>
-                  <td>0 g</td>
-                </tr>
-                <tr>
-                  <td>Proteínas</td>
-                  <td>0 g</td>
-                </tr>
-                <tr>
-                  <td>Sal</td>
-                  <td>0.02 g</td>
-                </tr>
-                <tr>
-                  <td>Ingredientes</td>
-                  <td>Agua carbonatada, colorante E‐150d, acidulante ácido fosfórico, edulcorantes, aromas naturales, cafeína y corrector de acidez.
-                  </td>
-                  <tb>Contiene una fuente de fenilalanina.</td>
-                </tr>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Slide 4 -->
-    <div class="pane" id="p4">
-      <div class="label">Zero Zero</div>
+    <div class="panes d-flex">
+      <!-- Slide 1 -->
+      <div class="pane" id="p1">
+        <div class="label">Coca-Cola</div>
         <div class="content container-fluid">
           <div class="row align-items-center">
             <div class="col-md-">
-              <img src="imagen/lata-coca-cola-zerozero.png" alt="Cocacola zero azúcar zero cafeína" class="img-fluid w-100 w-md-80">
+              <img src="imagen/lata-coca-cola.png" alt="Cocacola normal" class="img-fluid w-100 w-md-80">
             </div>
           </div>
           <div class="col-md-8 text-start position-relative">
-            <h1>Coca-Cola Zero Azúcar Zero Cafeína</h1>
-            <h2>Sin azúcar. Sin calorías. Sin calorías.</h2>
-            <p>A veces apetece disfrutar de una Coca-Cola sin calorías, con sabor a Coca-Cola y sin cafeína. Coca-Cola zero azúcar zero cafeína, lanzada el 15 de julio de 2010, se consolidó rápidamente en el mercado.
-            <p>Nota: las versiones sin cafeína se identifican por la indicación “sin cafeína” y por una franja dorada en latas y botellas PET.</p>
+            <h1>Coca-Cola Clásica</h1>
+            <h2>Siente el sabor de tu bebida favorita</h2>
+            <p>Corría el año 1886. Lugar: Atlanta (Georgia). Un farmacéutico llamado John Pemberton se propuso crear una bebida que fuera a la vez refrescante y vigorizante. Buscó la mezcla perfecta de ingredientes frescos de todo el mundo hasta que la encontró. Y llamó a esa bebida Coca‑Cola.</p>
             <p>Se recomienda mantener una alimentación variada y un estilo de vida activo y saludable.</p>
             <p>Bebida refrescante aromatizada con edulcorantes.</p>
             <div class="toggle-wrapper d-inline-block position-relative">
               <button class="toggle btn btn-light">Ver Información Nutricional</button>
-                <div class="extra">
-                  <h5>Información Nutricional</h5>
-                  <table style="width:100%; color:#000; font-size:11px;">
-                    <tr>
-                      <td>Calorías</td>
-                      <td>0.2 kcal</td>
-                    </tr>
-                    <tr>
-                      <td>Grasas</td>
-                      <td>0 g</td>
-                    </tr>
-                    <tr>
-                      <td>Hidratos de carbono</td>
-                      <td>0º g</td>
-                    </tr>
-                    <tr>
-                      <td>Azúcares totales</td>
-                      <td>0 g</td>
-                    </tr>
-                    <tr>
-                      <td>Proteínas</td>
-                      <td>0 g</td>
-                    </tr>
-                    <tr>
-                      <td>Sal</td>
-                      <td>0.02 g</td>
-                    </tr>
-                    <tr>
-                      <td>Ingredientes</td>
-                      <td>Agua carbonatada, colorante E‐150d, acidulante ácido fosfórico, edulcorantes, aromas naturales, aroma cafeína y corrector de acidez.
-                      </td>
-                      <tb>Contiene una fuente de fenilalanina.</td>
-                    </tr>
-                  </table>
-                </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Slide 5 -->
-           <div class="pane" id="p5">
-      <div class="label">Sin Cafeína</div>
-      <div class="content container-fluid">
-        <div class="row align-items-center">
-          <div class="col-md-">
-            <img src="imagen/lata-coca-cola-sincafeina.png" alt="Cocacola sin cafeína" class="img-fluid w-100 w-md-80">
-          </div>
-        </div>
-        <div class="col-md-8 text-start position-relative">
-          <h1>Coca-Cola Sin Cafeína</h1>
-          <h2>Sin azúcar. Sin calorías. Sin calorías.</h2>
-          <p>Coca-Cola sin cafeína ofrece el sabor y la calidad de Coca-Cola sin cafeína. Lanzada en España en 1983, fue la primera ampliación de la marca original. Es una bebida versátil y divertida, ideal para cualquier momento del día.</p>
-          <p>Nota: recuerda que las versiones sin cafeína las distinguirás porque pone sin cafeína y en las latas y las botellas de plástico (PET) la franja es de color dorado.</p>
-          <p>Se recomienda mantener una alimentación variada y un estilo de vida activo y saludable.</p>
-          <p>Bebida refrescante aromatizada con edulcorantes.</p>
-          <div class="toggle-wrapper d-inline-block position-relative">
-            <button class="toggle btn btn-light">Ver Información Nutricional</button>
-            <div class="extra">
-             <h5>Información Nutricional</h5>
-              <table style="width:100%; color:#000; font-size:11px;">
-                <tr>
-                  <td>Calorías</td>
-                  <td>44 kcal</td>
-                </tr>
-                <tr>
-                  <td>Grasas</td>
-                  <td>0 g</td>
-                </tr>
-                <tr>
-                  <td>Hidratos de carbono</td>
-                  <td>11.1 g</td>
-                </tr>
-                <tr>
-                  <td>Azúcares totales</td>
-                  <td>11.1 g</td>
-                </tr>
-                <tr>
-                  <td>Proteínas</td>
-                  <td>0 g</td>
-                </tr>
-                <tr>
-                  <td>Sal</td>
-                  <td>0 g</td>
-                </tr>
-                <tr>
-                  <td>Ingredientes</td>
-                  <td>Agua carbonatada, azúcar, colorante E‐150d, acidulante ácido fosfórico y aromas.
-                  </td>
-                </tr>
-              </table>
+              <div class="extra">
+              <h5>Información Nutricional</h5>
+                <table style="width:100%; color:#000; font-size:11px;">
+                  <tr>
+                    <td>Calorías</td>
+                    <td>42 kcal</td>
+                  </tr>
+                  <tr>
+                    <td>Grasas</td>
+                    <td>0 g</td>
+                  </tr>
+                  <tr>
+                    <td>Hidratos de carbono</td>
+                    <td>10.6 g</td>
+                  </tr>
+                  <tr>
+                    <td>Azúcares totales</td>
+                    <td>10.6 g</td>
+                  </tr>
+                  <tr>
+                    <td>Proteínas</td>
+                    <td>0 g</td>
+                  </tr>
+                  <tr>
+                    <td>Sal</td>
+                    <td>0 g</td>
+                  </tr>
+                  <tr>
+                    <td>Ingredientes</td>
+                    <td>Agua carbonatada, azúcar, colorante E‐150d, acidulante ácido fosfórico, aromas naturales y aroma cafeína.</td>
+                  </tr>
+                </table>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+      <!-- Slide 2 -->
+      <div class="pane" id="p2">
+        <div class="label">Zero Azúcar</div>
+        <div class="content container-fluid">
+          <div class="row align-items-center">
+            <div class="col-md-">
+              <img src="imagen/lata-coca-cola-sinazucar.png" alt="Cocacola zero azúcar" class="img-fluid w-100 w-md-80">
+            </div>
+          </div>
+          <div class="col-md-8 text-start position-relative">
+            <h1>Coca-Cola Zero</h1>
+            <p>Coca-Cola zero azúcar ofrece el sabor de Coca-Cola sin azúcar, ideal para quienes buscan reducir calorías sin renunciar al sabor de siempre. Lanzada el 21 de junio de 2006, se convirtió en pocos años en uno de los lanzamientos más exitosos de la compañía en España.</p>
+            <p>Se recomienda mantener una alimentación variada y un estilo de vida activo y saludable.</p>
+            <p>Bebida refrescante aromatizada con edulcorantes.</p>
+            <div class="toggle-wrapper d-inline-block position-relative">
+              <button class="toggle btn btn-light">Ver Información Nutricional</button>
+              <div class="extra">
+              <h5>Información Nutricional</h5>
+                <table style="width:100%; color:#000; font-size:11px;">
+                  <tr>
+                    <td>Calorías</td>
+                    <td>0.2 kcal</td>
+                  </tr>
+                  <tr>
+                    <td>Grasas</td>
+                    <td>0 g</td>
+                  </tr>
+                  <tr>
+                    <td>Hidratos de carbono</td>
+                    <td>0º g</td>
+                  </tr>
+                  <tr>
+                    <td>Azúcares totales</td>
+                    <td>0 g</td>
+                  </tr>
+                  <tr>
+                    <td>Proteínas</td>
+                    <td>0 g</td>
+                  </tr>
+                  <tr>
+                    <td>Sal</td>
+                    <td>0.02 g</td>
+                  </tr>
+                  <tr>
+                    <td>Ingredientes</td>
+                    <td>Agua carbonatada, colorante E‐150d, acidulante ácido fosfórico, edulcorantes, aromas naturales, aroma cafeína y corrector de acidez: citratos de sodio.
+                    </td>
+                    <tb>Contiene una fuente de fenilalanina.</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Slide 3 -->
+    <div class="pane" id="p3">
+        <div class="label">Light</div>
+        <div class="content container-fluid">
+          <div class="row align-items-center">
+            <div class="col-md-">
+              <img src="imagen/lata-coca-cola-light.png" alt="Cocacola light" class="img-fluid w-100 w-md-80">
+            </div>
+          </div>
+          <div class="col-md-8 text-start position-relative">
+            <h1>Coca-Cola Light</h1>
+            <h2>Sin azúcar. Sin calorías.</h2>
+            <p>Lanzada en España en 1984, es una bebida para quienes buscan un sabor único y atractivo. Surgió en 1982 en EE. UU. como Diet Coke y pronto se expandió internacionalmente. Su éxito se debe a la imagen de la marca, sus campañas publicitarias y, sobre todo, a su poder refrescante y buen sabor, sin aportar calorías.</p>
+            <p>Se recomienda mantener una alimentación variada y un estilo de vida activo y saludable.</p>
+            <p>Bebida refrescante aromatizada con edulcorantes.</p>
+            <div class="toggle-wrapper d-inline-block position-relative">
+              <button class="toggle btn btn-light">Ver Información Nutricional</button>
+              <div class="extra">
+              <h5>Información Nutricional</h5>
+                <table style="width:100%; color:#000; font-size:11px;">
+                  <tr>
+                    <td>Calorías</td>
+                    <td>0.2 kcal</td>
+                  </tr>
+                  <tr>
+                    <td>Grasas</td>
+                    <td>0 g</td>
+                  </tr>
+                  <tr>
+                    <td>Hidratos de carbono</td>
+                    <td>0º g</td>
+                  </tr>
+                  <tr>
+                    <td>Azúcares totales</td>
+                    <td>0 g</td>
+                  </tr>
+                  <tr>
+                    <td>Proteínas</td>
+                    <td>0 g</td>
+                  </tr>
+                  <tr>
+                    <td>Sal</td>
+                    <td>0.02 g</td>
+                  </tr>
+                  <tr>
+                    <td>Ingredientes</td>
+                    <td>Agua carbonatada, colorante E‐150d, acidulante ácido fosfórico, edulcorantes, aromas naturales, cafeína y corrector de acidez.
+                    </td>
+                    <tb>Contiene una fuente de fenilalanina.</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Slide 4 -->
+      <div class="pane" id="p4">
+        <div class="label">Zero Zero</div>
+          <div class="content container-fluid">
+            <div class="row align-items-center">
+              <div class="col-md-">
+                <img src="imagen/lata-coca-cola-zerozero.png" alt="Cocacola zero azúcar zero cafeína" class="img-fluid w-100 w-md-80">
+              </div>
+            </div>
+            <div class="col-md-8 text-start position-relative">
+              <h1>Coca-Cola Zero Azúcar Zero Cafeína</h1>
+              <h2>Sin azúcar. Sin calorías. Sin calorías.</h2>
+              <p>A veces apetece disfrutar de una Coca-Cola sin calorías, con sabor a Coca-Cola y sin cafeína. Coca-Cola zero azúcar zero cafeína, lanzada el 15 de julio de 2010, se consolidó rápidamente en el mercado.
+              <p>Nota: las versiones sin cafeína se identifican por la indicación “sin cafeína” y por una franja dorada en latas y botellas PET.</p>
+              <p>Se recomienda mantener una alimentación variada y un estilo de vida activo y saludable.</p>
+              <p>Bebida refrescante aromatizada con edulcorantes.</p>
+              <div class="toggle-wrapper d-inline-block position-relative">
+                <button class="toggle btn btn-light">Ver Información Nutricional</button>
+                  <div class="extra">
+                    <h5>Información Nutricional</h5>
+                    <table style="width:100%; color:#000; font-size:11px;">
+                      <tr>
+                        <td>Calorías</td>
+                        <td>0.2 kcal</td>
+                      </tr>
+                      <tr>
+                        <td>Grasas</td>
+                        <td>0 g</td>
+                      </tr>
+                      <tr>
+                        <td>Hidratos de carbono</td>
+                        <td>0º g</td>
+                      </tr>
+                      <tr>
+                        <td>Azúcares totales</td>
+                        <td>0 g</td>
+                      </tr>
+                      <tr>
+                        <td>Proteínas</td>
+                        <td>0 g</td>
+                      </tr>
+                      <tr>
+                        <td>Sal</td>
+                        <td>0.02 g</td>
+                      </tr>
+                      <tr>
+                        <td>Ingredientes</td>
+                        <td>Agua carbonatada, colorante E‐150d, acidulante ácido fosfórico, edulcorantes, aromas naturales, aroma cafeína y corrector de acidez.
+                        </td>
+                        <tb>Contiene una fuente de fenilalanina.</td>
+                      </tr>
+                    </table>
+                  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Slide 5 -->
+            <div class="pane" id="p5">
+        <div class="label">Sin Cafeína</div>
+        <div class="content container-fluid">
+          <div class="row align-items-center">
+            <div class="col-md-">
+              <img src="imagen/lata-coca-cola-sincafeina.png" alt="Cocacola sin cafeína" class="img-fluid w-100 w-md-80">
+            </div>
+          </div>
+          <div class="col-md-8 text-start position-relative">
+            <h1>Coca-Cola Sin Cafeína</h1>
+            <h2>Sin azúcar. Sin calorías. Sin calorías.</h2>
+            <p>Coca-Cola sin cafeína ofrece el sabor y la calidad de Coca-Cola sin cafeína. Lanzada en España en 1983, fue la primera ampliación de la marca original. Es una bebida versátil y divertida, ideal para cualquier momento del día.</p>
+            <p>Nota: recuerda que las versiones sin cafeína las distinguirás porque pone sin cafeína y en las latas y las botellas de plástico (PET) la franja es de color dorado.</p>
+            <p>Se recomienda mantener una alimentación variada y un estilo de vida activo y saludable.</p>
+            <p>Bebida refrescante aromatizada con edulcorantes.</p>
+            <div class="toggle-wrapper d-inline-block position-relative">
+              <button class="toggle btn btn-light">Ver Información Nutricional</button>
+              <div class="extra">
+              <h5>Información Nutricional</h5>
+                <table style="width:100%; color:#000; font-size:11px;">
+                  <tr>
+                    <td>Calorías</td>
+                    <td>44 kcal</td>
+                  </tr>
+                  <tr>
+                    <td>Grasas</td>
+                    <td>0 g</td>
+                  </tr>
+                  <tr>
+                    <td>Hidratos de carbono</td>
+                    <td>11.1 g</td>
+                  </tr>
+                  <tr>
+                    <td>Azúcares totales</td>
+                    <td>11.1 g</td>
+                  </tr>
+                  <tr>
+                    <td>Proteínas</td>
+                    <td>0 g</td>
+                  </tr>
+                  <tr>
+                    <td>Sal</td>
+                    <td>0 g</td>
+                  </tr>
+                  <tr>
+                    <td>Ingredientes</td>
+                    <td>Agua carbonatada, azúcar, colorante E‐150d, acidulante ácido fosfórico y aromas.
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-  <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="JS/script.js"></script>
-</body>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="JS/script.js"></script>
+  </body>
 </html>
