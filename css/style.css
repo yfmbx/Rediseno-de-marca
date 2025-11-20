@@ -8,13 +8,16 @@
   --rojo-cocacola: #fe001a
 }
 
+
+
 *{
   box-sizing: border-box;
-  font-family: 'TCCC-UnityHeadline-Medium', cursive;  color: #fff;
+  font-family: "TCCC-UnityHeadline Regular";
+  color: #fff;
 }
 
 body{
-  font-family: 'TCCC-UnityHeadline-Medium', cursive;
+  /* font-family: 'TCCC-UnityHeadline-Medium', cursive; */
   margin: 0;
   padding: 0 0;
   background-color: #2e2e2e;
