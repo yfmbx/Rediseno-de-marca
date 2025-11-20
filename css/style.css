@@ -849,8 +849,14 @@ div.pane.expand .content {
 }
 
 /* En pantallas pequeñas, apilar columnas y centrar imágenes/texto */
-@media (max-width: 767.98px) {
-  /* Forzar que las columnas ocupen 100% y se apilen */
+@media (max-width: 767px) {
+   .menu-central ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .user-btn {
+    margin-top: 10px;
+  }
   .row.section {
     display: flex;
     flex-direction: column;
