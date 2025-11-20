@@ -324,7 +324,8 @@ html, body {
 div.pane .content {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
+  padding-top: 10%;
   opacity: 0;
   transform: scale(1.2);
   transition: all .5s;
@@ -348,7 +349,7 @@ div.pane .content .extra {
   background: rgba(255,255,255,0.2);
   padding: 10px;
   border-radius: 5px;
-  max-width: 300px;
+  max-width: 450px;
   width: 100%;
 }
 
@@ -405,7 +406,6 @@ div.pane .content .toggle {
   direction: rtl;
   transform: rotate(180deg) translateX(-50%);
   transform-origin: left top;
-  color: var(--bg);
   pointer-events: none;
   opacity: 1;
   transition: opacity .3s;
@@ -450,9 +450,9 @@ div.pane.expand .content {
 }
 
 /* Colores distintos para cada pane */
-#p1 { background-color: crimson; }
-#p2 { background-color: royalblue; }
-#p3 { background-color: seagreen; }
-#p4 { background-color: orange; }
-#p5 { background-color: purple; }
+#p1 { background-color: var(--rojo-cocacola) }
+#p2 { background-color: rgb(0, 0, 0); }
+#p3 { background-color: rgb(221, 221, 221); }
+#p4 { background-color: rgb(223, 202, 13); }
+#p5 { background-color: rgb(255, 166, 0); }
 
