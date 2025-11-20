@@ -9,7 +9,6 @@
   var(--nav-height): 72px;
 }
 
-
 *{
   box-sizing: border-box;
   font-family: "TCCC-UnityHeadline Regular";
@@ -44,8 +43,8 @@ body{
   top: 0; left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;   /* que se ajuste */
-  z-index: 0;         /* se queda detrás del texto */
+  object-fit: cover;
+  z-index: 0;
 }
 
 header {
@@ -116,6 +115,7 @@ header {
 
 .dropdown-item {
   color: #fff;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .dropdown-item:hover {
@@ -306,6 +306,11 @@ header {
   background: linear-gradient(135deg, #fe001a, #ff4d6d);
   color: #fff;
   padding: 8px;
+}
+
+.custom-card .card-body p {
+  font-size: 0.8rem;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .custom-card .btn {
