@@ -140,10 +140,6 @@ header {
 }
 
 /* DESCUBRE */
-.descubre-text-button h2 {
-  margin-bottom: 3rem;
-}
-
 .img-lata {
   transform: rotate(10deg);
   transition: transform 0.45s ease;
@@ -157,16 +153,6 @@ header {
   transform: rotate(-10deg) scale(1.2);
 }
 
-.descubre-btn .btn {
-  border-radius: 50px;
-  width: 150px;
-  transition: all 0.3s ease;
-}
-
-.descubre-btn .btn:hover {
-  box-shadow: 0 0 15px rgba(224, 85, 85, 0.7);
-  transform: scale(1.05);
-}
 
 
   
@@ -178,17 +164,17 @@ header {
   overflow: visible;
   gap: -60px;
   /* white-space: nowrap; */
-  margin-top: 80px;
+  margin-top: 50px;
 }
 
 
 .marquee, .marquee-detras {
-  position: absolute;
+  position: absolute;        /* ya no absolute */
   display: flex;
   align-items: center;
   height: 110px;
   overflow-x:hidden;
-  width: 100%;
+  width: 100vw;
   background-color: #fff;
   white-space: nowrap;
   margin: 50px 0; 
@@ -251,6 +237,13 @@ header {
   justify-content: center;
 }
 
+.tarjetas .card {
+  margin: 20px;
+  width: 100%;
+  height: 400px;
+  max-width: 300px;
+}
+
 .custom-card {
   border: none;
   border-radius: 20px;
@@ -265,15 +258,17 @@ header {
 }
 
 .custom-card .card-img-top {
-  height: 250px;
-  object-fit: cover;
+  width: 100%;
+  height:auto;         /* altura fija */
+  object-fit: cover;   /* ajusta la imagen dentro */
+  display: block;
 }
 
 .custom-card .card-body {
   text-align: center;
   background: linear-gradient(135deg, #fe001a, #ff4d6d);
   color: #fff;
-  padding: 20px;
+  padding: 8px;
 }
 
 .custom-card .btn {
@@ -291,10 +286,11 @@ header {
   box-shadow: 0 0 15px rgba(255,255,255,0.6);
 }
 
-.descubre-text-button {
-  gap: 20px;
-  margin-top: 20px;
-}
+.tarjetas .card img
+.tarjetas .carousel-inner img {
+  height: 100%;
+  object-fit: cover;
+  }
 
 .tarjetas.row {
   display: flex;
@@ -315,6 +311,14 @@ header {
 .tarjetas .card-img-top {
   height: 100%;
   object-fit: cover;
+}
+
+/* 1) Limitar la imagen solo en la tarjeta 2 (la col-md-3) */
+.tarjetas .row .col-md-3 .custom-card > img.card-img-top {
+  height: 200px !important;   /* más baja para dejar sitio al botón */
+  object-fit: contain !important;  /* que no se recorte */
+  width: 100%;
+  display: block;
 }
 
 
