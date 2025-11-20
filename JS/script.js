@@ -67,6 +67,15 @@ document.addEventListener('DOMContentLoaded', () => {
   marquee.appendChild(clone);
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+  const myCarousel = document.querySelector('#carouselCocaCola');
+  if (myCarousel) {
+    new bootstrap.Carousel(myCarousel, {
+      interval: 3000,   // 3 segundos
+      ride: 'carousel'
+    });
+  }
+});
 
 // PAGINA cocacola
 
