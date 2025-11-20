@@ -140,6 +140,10 @@ header {
 }
 
 /* DESCUBRE */
+.descubre-text-button h2 {
+  margin-bottom: 3rem;
+}
+
 .img-lata {
   transform: rotate(10deg);
   transition: transform 0.45s ease;
@@ -153,6 +157,16 @@ header {
   transform: rotate(-10deg) scale(1.2);
 }
 
+.descubre-btn .btn {
+  border-radius: 50px;
+  width: 150px;
+  transition: all 0.3s ease;
+}
+
+.descubre-btn .btn:hover {
+  box-shadow: 0 0 15px rgba(224, 85, 85, 0.7);
+  transform: scale(1.05);
+}
 
 
   
