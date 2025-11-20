@@ -818,89 +818,98 @@ div.pane.expand .content {
 
 
 
-/* RESPONSIVE MARCAS */
-/* Pequeñas mejoras para muy pequeños dispositivos */
-@media (max-width: 375px) {
+
+/* MÓVIL: hasta 576px */
+@media (max-width: 576px) {
   .titulo-marcas { font-size: 1.6rem; }
   .subtitulo-marcas { font-size: 0.95rem; }
   .logo-img { height: 38px; }
-}
 
-/* Media Query For different screens */
-@media (min-width:320px) and (max-width:479px)  { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+  .marquee-wrapper {
+    height: 40px;
+  }
+
+  .marquee-content img {
+    height: 40px;
+  }
+
+  .marquee {
+    transform: rotate(-10deg);
+  }
+
+  .marquee-detras {
+    transform: rotate(10deg);
+  }
+
+  .tarjetas {
+    padding-top: 200px;
+    align-items: center;
+  }
+
   .footer-content {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     max-width: 1230px;
     padding: 40px 15px 1050px;
     position: relative;
-  }
-}
-@media (min-width:480px) and (max-width:599px)  { /* smartphones, Android phones, landscape iPhone */
-  .footer-content {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1230px;
-    padding: 40px 15px 1050px;
-    position: relative;
-  }
-}
-@media (min-width:600px) and (max-width: 800px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
-  .footer-content {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1230px;
-    padding: 40px 15px 1050px;
-    position: relative;
-  }
-}
-
-
-
-
-@media (min-width: 760px) {
-  .footer-content {
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 1230px;
-      padding: 40px 15px;
-      position: relative;
-  }
-
-  .footer-wave-svg {
-      height: 50px;
   }
 
   .footer-content-column {
-      width: 24.99%;
+    width: 100%;
   }
-}
-@media (min-width: 568px) {
-  .footer-content-column {
-      width: 49.99%;
-  }
-}
 
-
-/* RESPONSIVE INDEX */
-@media (max-width: 767.98px) {
   :root { --nav-height: 72px; }
+
   .menu-header .navbar-collapse {
     background: rgba(0,0,0,0.92);
     padding: 1rem;
     margin-top: 0.4rem;
     border-radius: 8px;
   }
-  .logo-img { height: 42px; }
-  .navbar-toggler { border-color: rgba(255,255,255,0.15); }
+
+  .navbar-toggler {
+    border-color: rgba(255,255,255,0.15);
+  }
 }
 
-/* Ajustes para tablets/desktop si necesario */
-@media (min-width: 768px) {
+/* TABLET: 577px a 991px */
+@media (min-width: 577px) and (max-width: 991px) {
+  .logo-img { height: 42px; }
+
+  .footer-content {
+    margin: 0 auto;
+    max-width: 1230px;
+    padding: 40px 15px 1050px;
+    position: relative;
+  }
+
+  .footer-content-column {
+    width: 49.99%;
+  }
+
   :root { --nav-height: 72px; }
 }
 
-/* Asegura que secciones principales respeten el padding-top del body */
+/* DESKTOP: desde 992px */
+@media (min-width: 992px) {
+  .footer-content {
+    margin: 0 auto;
+    max-width: 1230px;
+    padding: 40px 15px;
+    position: relative;
+  }
+
+  .footer-wave-svg {
+    height: 50px;
+  }
+
+  .footer-content-column {
+    width: 24.99%;
+  }
+
+  :root { --nav-height: 72px; }
+}
+
+/* Ajustes generales */
 .container-marcas,
 .descubre-container,
 .tarjetas,
