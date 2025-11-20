@@ -178,17 +178,17 @@ header {
   overflow: visible;
   gap: -60px;
   /* white-space: nowrap; */
-  margin-top: 50px;
+  margin-top: 80px;
 }
 
 
 .marquee, .marquee-detras {
-  position: absolute;        /* ya no absolute */
+  position: absolute;
   display: flex;
   align-items: center;
   height: 110px;
   overflow-x:hidden;
-  width: 100vw;
+  width: 100%;
   background-color: #fff;
   white-space: nowrap;
   margin: 50px 0; 
