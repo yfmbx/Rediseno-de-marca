@@ -19,6 +19,7 @@ body{
   margin: 0;
   padding: 0 0;
   background-color: #2e2e2e;
+  cursor: none;
 }
 
 .cursor {
@@ -485,12 +486,12 @@ div.pane .content .toggle {
 /* Texto horizontal encima de panes comprimidos */
 .pane .label {
   position: absolute;
-  top: 30%;
+  bottom: 30%;
   padding-right: 60px ;
   writing-mode: vertical-rl;
   direction: rtl;
   transform: rotate(180deg) translateX(-50%);
-  transform-origin: left top;
+  transform-origin: left bottom;
   pointer-events: none;
   opacity: 1;
   transition: opacity .3s;
@@ -499,7 +500,7 @@ div.pane .content .toggle {
   white-space: normal;
   word-break: break-word;
   max-height: 20%;
-  text-align: end;
+  text-align: center;
 }
 
 
