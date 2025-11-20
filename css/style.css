@@ -3,25 +3,30 @@
   --muted: #94a3b8;
   --accent: #06b6d4;
   --max-width: 1100px;
+  --count-slides: 5;
+  --compacted-width: 5%;
+  --rojo-cocacola: #fe001a
 }
 
 *{
-  box-sizing: border-box
+  box-sizing: border-box;
+  font-family: 'TCCC-UnityHeadline-Medium', cursive;
+  color: #fff;
 }
 
-body{
-  font-family: Arial, sans-serif;
+body {
+  /* font-family: Arial, sans-serif; */
   margin: 0;
   padding: 0 0;
-  /* background-color: #f4f4f4; */
+  background-color: #2e2e2e;
 }
 
-header{
+header {
   padding: 0 0;
   text-align: center;
 }
 
-.site-header{
+.site-header {
   display: flex;
   justify-content: center;
   background: transparent;
@@ -42,12 +47,30 @@ header{
 }
 
 .menu-header {
-  z-index: 1050; /* siempre encima */
+  z-index: 9999;
+  position: fixed;
+  pointer-events: auto;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .menu-central {
   background-color: var(--bg);
   border-radius: 20px;
+}
+
+.user-btn .btn {
+  background-color: var(--rojo-cocacola);   
+  color: #fff;
+  border: none;
+  transition: all 0.3s ease;
+  border-radius: 24px;
+}
+
+.user-btn .btn:hover {
+  box-shadow: 0 0 15px rgba(224, 85, 85, 0.7);
+  transform: scale(1.05);
 }
   
   
@@ -68,8 +91,16 @@ header{
 
 
 /* video */
+.video-section {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+
 #bg-video {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
@@ -78,15 +109,67 @@ header{
   z-index: -1;
 }
 
+/* DESCUBRE */
+.img-lata {
+  transform: rotate(10deg);
+  transition: transform 0.45s cubic-bezier(.2,.9,.2,1);
+  transform-origin: center;
+  display: block;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.img-lata:hover {
+  transform: rotate(-10deg);
+}
+
+.descubre-text-button {
+  gap: 20px;
+  margin-top: 20px;
+}
+
   
 /* MARQUEE */
+.marquee-wrapper {
+  position: relative;
+  width: 100%;
+  height: 300px; /* Ajusta según necesites */
+  overflow: visible; /* Permite que las imágenes rotadas no se corten */
+  gap: -60px
+}
+
 .marquee {
+  position: absolute;
+  top: 50%;
+  left: 50%;
   display: flex;
   align-items: center;
+  height: 110px;
+  overflow: hidden;
+  background: transparent;
+  position: relative;
+  margin: 100px 0px;
+  transform: rotate(-8deg);
+  background-color: #fff;
+  width: max-content;
+  transform: translate(-50%, -50%) rotate(-5deg); /* Trasladar al centro y rotar */
+}
+
+.marquee-detras {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  height: 110px;
   height: 80px;
   overflow: hidden;
   background: transparent;
   position: relative;
+  transform: rotate(5deg);
+  background-color: #fff;
+  width: max-content;
+  transform: translate(-50%, -50%) rotate(5deg); /* Trasladar al centro y rotar */
 }
   
 .marquee-content {
@@ -94,9 +177,15 @@ header{
   gap: 100px;
   animation: scroll 15s linear infinite;
 }
+
+.marquee-content-detras {
+  display: flex;
+  gap: 100px;
+  animation: scroll-reverse 15s linear infinite;
+}
   
-.marquee-content img {
-  height: 70px;
+.marquee-content img, .marquee-content-detras img {
+  height: 90px;
   width: auto;
   object-fit: contain;
   margin: 0;
@@ -106,7 +195,7 @@ header{
   transition: transform 0.3s ease;
 }
   
-.marquee-content img:hover {
+.marquee-content img:hover, .marquee-content-detras img:hover {
   transform: scale(1.1);
 }
   
@@ -114,17 +203,46 @@ header{
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
+
+@keyframes scroll-reverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
   
-.marquee:hover .marquee-content {
+.marquee:hover .marquee-content, .marquee-detras:hover .marquee-content-detras {
   animation-play-state: paused;
 }
 
 
+/* marca */
+.section {
+  margin: 40px 0;
+}
 
-/* PAGINA MARCA  */
+.section-title {
+  margin-bottom: 10px;
+}
+
+.scroll-text {
+  max-height: 250px;
+  overflow-y: auto;
+  padding: 15px;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  scrollbar-width: none;   -ms-overflow-style: none;
+}
+
+.scroll-text::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+/* PAGINA COCA-COLA  */
 /* TARJETAS  */
 
-/* Carrousel */
+/* Contenedor principal */
 div.panes {
   max-width: none;
   width: 100vw;
@@ -136,6 +254,7 @@ div.panes {
   text-align: center;
 }
 
+/* Cada slide */
 div.panes > div.pane {
   width: calc(100% / var(--count-slides));
   height: 100%;
@@ -148,14 +267,16 @@ div.panes > div.pane {
   overflow: hidden;
 }
 
-/* Estado compactado/expandido controlado por clases */
+/* Estado comprimido/expandido */
 div.panes.magic > div.pane {
   width: var(--compacted-width);
 }
 div.panes.magic > div.pane.expand {
-  width: 85%;
+  width: calc(100% - (var(--compacted-width) * (var(--count-slides) - 1)));
 }
 
+
+/* Contenido interno */
 /* Forzar compactado cuando no hay clase .magic (opcional) */
 /* div.panes > div.pane { width: var(--compacted-width); } */
 
@@ -168,19 +289,50 @@ html, body {
 /* Contenido */
 div.pane .content {
   opacity: 0;
-  transform: scale(2);
+  transform: scale(1.2);
   transition: all .5s;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   height: 100%;
-  background: rgba(0,0,0,.2);
+  background: rgba(0,0,0,.4);
   color: #fff;
+  transition: opacity .5s;
+}
+
+div.pane.expand .content {
+  opacity: 1;
+  transform: scale(1);
   backdrop-filter: blur(0px);
 }
 
+
+/* Extra desplegable */
+div.pane .content .extra {
+  display: none;
+  margin-top: 10px;
+  background: rgba(255,255,255,0.2);
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 300px;
+  width: 100%;
+}
+
+/* Imagen */
+div.pane .content img {
+  margin-left: 40px;
+  transition: transform 0.4s ease; /* animación suave */
+}
+
+div.pane .content img:hover {
+  transform: rotate(-8deg) scale(1.05); /* gira y aumenta un poco */
+}
+
+
+/* Texto */
 div.pane .content h1 {
+  margin: 10px 0;
   font-size: 40px;
   margin: 0;
 }
@@ -189,28 +341,46 @@ div.pane .content p {
   max-width: 80%;
 }
 
-/* Botones */
-div.pane .content .buttons button {
+/* Botón desplegable */
+div.pane .content .toggle {
   background: #fff;
   border: none;
   color: #000;
-  font-size: 14px;
-  padding: 7px 12px;
-  border-radius: 5px;
-  margin: 5px;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  margin-top: 1rem;
   transition: all .3s;
   cursor: pointer;
+  min-width: 120px;
+  text-align: center;
 }
 
-div.pane .content .buttons button.flat {
-  background: transparent;
-  color: #fff;
+/* Colores distintos para cada pane */
+#p1 { background-color: crimson; }
+#p2 { background-color: royalblue; }
+#p3 { background-color: seagreen; }
+#p4 { background-color: orange; }
+#p5 { background-color: purple; }
+
+/* Texto horizontal encima de panes comprimidos */
+.pane .label {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: rotate(-90deg) translateX(-50%);
+  transform-origin: left top;
+  color: var(--bg);
+  font-weight: bold;
+  white-space: nowrap;
+  pointer-events: none; /* no bloquea clics */
+  opacity: 1;
+  transition: opacity .3s;
 }
 
-div.pane .content .buttons button:hover {
-  background: #fff;
-  color: #000;
-  box-shadow: 0 0 15px #fff;
+/* Ocultar el label cuando el pane está expandido */
+.pane.expand .label {
+  opacity: 0;
 }
 
 /* Mostrar contenido solo si la pane tiene la clase expand */
