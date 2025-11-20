@@ -250,7 +250,6 @@ div.panes {
   border-radius: 0;
   font-size: 0;
   overflow: hidden;
-  text-align: center;
 }
 
 /* Cada slide */
@@ -274,11 +273,6 @@ div.panes.magic > div.pane.expand {
   width: calc(100% - (var(--compacted-width) * (var(--count-slides) - 1)));
 }
 
-
-/* Contenido interno */
-/* Forzar compactado cuando no hay clase .magic (opcional) */
-/* div.panes > div.pane { width: var(--compacted-width); } */
-
 /* Forzar html/body a tamaño completo y quitar márgenes */
 html, body {
   height: 100%;
@@ -287,13 +281,12 @@ html, body {
 
 /* Contenido */
 div.pane .content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   opacity: 0;
   transform: scale(1.2);
   transition: all .5s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   height: 100%;
   background: rgba(0,0,0,.4);
   color: #fff;
@@ -306,8 +299,8 @@ div.pane.expand .content {
   backdrop-filter: blur(0px);
 }
 
-
-/* Extra desplegable */
+/* 
+Extra desplegable */
 div.pane .content .extra {
   display: none;
   margin-top: 10px;
@@ -355,26 +348,25 @@ div.pane .content .toggle {
   text-align: center;
 }
 
-/* Colores distintos para cada pane */
-#p1 { background-color: crimson; }
-#p2 { background-color: royalblue; }
-#p3 { background-color: seagreen; }
-#p4 { background-color: orange; }
-#p5 { background-color: purple; }
-
 /* Texto horizontal encima de panes comprimidos */
 .pane .label {
   position: absolute;
-  top: 10px;
-  left: 50%;
-  transform: rotate(-90deg) translateX(-50%);
+  top: 20%;
+  padding-right: 60px ;
+  writing-mode: vertical-rl;
+  direction: rtl;
+  transform: rotate(180deg) translateX(-50%);
   transform-origin: left top;
   color: var(--bg);
-  font-weight: bold;
-  white-space: nowrap;
-  pointer-events: none; /* no bloquea clics */
+  pointer-events: none;
   opacity: 1;
   transition: opacity .3s;
+  border: none;
+  font-size: 24px;
+  white-space: normal;
+  word-break: break-word;
+  max-height: 20%;
+  text-align: end;
 }
 
 /* Ocultar el label cuando el pane está expandido */
@@ -390,8 +382,29 @@ div.pane.expand .content {
   backdrop-filter: blur(25px);
 }
 
-/* Backgrounds */
-#p1 { background: rgb(0,120,250) url(https://i.imgur.com/uCdoqQ1.png) center/cover no-repeat; }
-#p2 { background: deeppink url(https://cdn.discordapp.com/attachments/561577396759822346/572835279308587008/unknown.png) center/cover no-repeat; }
-#p3 { background: orange url(https://cdn.discordapp.com/attachments/561577396759822346/572844868955537428/unknown.png) center/cover no-repeat; }
-#p4 { background: lime url(https://media.discordapp.net/attachments/541021063170097184/573163476420395018/unknown.png) center/cover no-repeat; }
+/* Botón + desplegable */
+.toggle-wrapper {
+  position: relative;
+}
+
+.toggle-wrapper .extra {
+  display: none;
+  position: absolute;
+  top: 110%;   /* justo debajo del botón */
+  left: 0;
+  background: rgba(255,255,255,0.9);
+  color: #000;
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 300px;
+  width: 100%;
+  z-index: 10;
+}
+
+/* Colores distintos para cada pane */
+#p1 { background-color: crimson; }
+#p2 { background-color: royalblue; }
+#p3 { background-color: seagreen; }
+#p4 { background-color: orange; }
+#p5 { background-color: purple; }
+
