@@ -9,7 +9,6 @@
   var(--nav-height): 72px;
 }
 
-
 *{
   box-sizing: border-box;
   font-family: "TCCC-UnityHeadline Regular";
@@ -116,6 +115,7 @@ header {
 
 .dropdown-item {
   color: #fff;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .dropdown-item:hover {
@@ -298,6 +298,11 @@ header {
   background: linear-gradient(135deg, #fe001a, #ff4d6d);
   color: #fff;
   padding: 8px;
+}
+
+.custom-card .card-body p {
+  font-size: 0.8rem;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .custom-card .btn {
