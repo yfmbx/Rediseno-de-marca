@@ -83,6 +83,25 @@ header {
   box-shadow: 0 0 15px rgba(224, 85, 85, 0.7);
   transform: scale(1.05);
 }
+
+.dropdown-menu{
+  background-color: var(--bg);
+  border: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-top: 10px;
+  border-radius: 10px;
+  display: none;
+}
+
+.dropdown-item {
+  color: #fff;
+}
+
+.dropdown-item:hover {
+  background-color: var(--rojo-cocacola);
+  color: #fff;
+  border-radius: 30px;
+}
   
   
 /* Mostrar dropdown al pasar el ratón */
