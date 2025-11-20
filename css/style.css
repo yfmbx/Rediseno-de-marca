@@ -367,7 +367,7 @@ div.pane .content img:hover {
 /* Texto */
 div.pane .content h1 {
   margin: 10px 0;
-  font-size: 40px;
+  font-size: 35px;
   margin: 0;
 }
 div.pane .content h2 {
@@ -378,7 +378,7 @@ div.pane .content h2 {
 }
 
 div.pane .content p {
-  font-size: 14px;
+  font-size: 13px;
   max-width: 80%;
 }
 
