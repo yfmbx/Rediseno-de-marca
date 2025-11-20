@@ -86,6 +86,14 @@ header {
   right: 0;
 }
 
+/* Navbar fijo y por encima */
+.menu-header .navbar {
+  z-index: 9999;
+  background: linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.06));
+  padding: 0.45rem 1rem;
+  backdrop-filter: blur(4px);
+}
+
 .menu-central {
   background-color: var(--bg);
   border-radius: 20px;
@@ -831,6 +839,10 @@ div.pane.expand .content {
   .navbar-toggler {
     border-color: rgba(255,255,255,0.15);
   }
+
+  .lata-img { 
+    width: 140px; 
+  }
 }
 
 /* TABLET: 577px a 991px */
@@ -930,5 +942,18 @@ div.pane.expand .content {
 .marquee-wrapper,
 .pg-footer {
   margin-top: 0;
+}
+
+/* en móvil, dar fondo oscuro al collapse */
+@media (max-width: 767.98px) {
+  :root { --nav-height: 64px; }
+  .menu-header .navbar-collapse {
+    background: rgba(0,0,0,0.92);
+    padding: 1rem;
+    margin-top: 0.4rem;
+    border-radius: 8px;
+  }
+  .logo-img { height: 42px; }
+  .navbar-toggler { border-color: rgba(255,255,255,0.15); }
 }
 
