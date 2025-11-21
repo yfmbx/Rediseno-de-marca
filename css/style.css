@@ -76,7 +76,7 @@ header {
   border-radius: 0 !important;
 }
 
-.user-btn .btn {
+.d-flex.ms-auto .btn {
   background-color:var(--rojo-cocacola);   
   color: #fff;
   border: none;
@@ -84,7 +84,7 @@ header {
   border-radius: 24px;
 }
 
-.user-btn .btn:hover {
+.d-flex.ms-auto .btn:hover {
   box-shadow: 0 0 15px rgba(224, 85, 85, 0.7);
   transform: scale(1.05);
   color: white;
