@@ -456,8 +456,8 @@ header {
 /* PAGINA COCA-COLA  */
 div.panes {
   max-width: none;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   margin: 0;
   border-radius: 0;
   font-size: 0;
@@ -840,6 +840,7 @@ body {
   .menu-header .navbar {
     background: transparent;
     padding: 0.35rem 1rem;
+
   }
 
   /* ul centrada se convierte en la "isla" */
@@ -928,5 +929,54 @@ body {
   }
   .custom-card .card-body p {
     font-size: 0.95rem;
+  }
+
+  body { padding-bottom:64px; }
+  .panes {
+    position:fixed;
+    bottom:0; left:0; right:0;
+    height:64px;
+    display:flex;
+    flex-direction:row;   /* horizontal */
+    justify-content:space-around;
+    background:#f8f8f8;
+    border-top:1px solid #ccc;
+    z-index:1000;
+  }
+
+  .pane {
+    flex:1;
+    height:64px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    overflow:hidden;
+  }
+
+  .pane .label {
+    font-size:16px;
+    line-height:64px;
+    margin:0;
+  }
+
+  /* Oculta contenido dentro de la barra */
+  .pane .content {
+    display:none;
+  }
+}
+
+@media (max-width:768px) {
+  .pane.expanded .content {
+    display:block;
+    position:fixed;
+    left:0; right:0; bottom:64px; top:0;
+    background:#fff;
+    overflow-y:auto;
+    z-index:1100;
+    padding:1rem;
+    border-top-left-radius:16px;
+    border-top-right-radius:16px;
+    box-shadow:0 -4px 14px rgba(0,0,0,0.2);
   }
 }
