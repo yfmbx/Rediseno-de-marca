@@ -9,7 +9,6 @@
   --nav-height: 72px;
 }
 
-
 *{
   box-sizing: border-box;
   font-family: "TCCC-UnityHeadline Regular";
@@ -18,11 +17,13 @@
 
 body{
   margin: 0;
-  padding: 0 0;
-  background-color: #2e2e2e;
-  cursor: auto;
+  padding: 0;
+  /* quitar espacio superior global */
+  padding-top: 0;
+  background-color: transparent;
 }
 
+/* Quitar fondo gris y usar transparencia para que se vea el vídeo */
 .cursor {
   position: fixed;
   width: 30px;
@@ -53,19 +54,6 @@ header {
   text-align: center;
 }
 
-.site-header {
-  display: flex;
-  justify-content: center;
-  background: transparent;
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 18px;
-  z-index: 40;
-  padding: 0;
-  pointer-events: none;
-}
-
 .logo > img {
   width: 150px;
   height: auto;
@@ -76,6 +64,8 @@ header {
 .logo-img {
   width: 150px;
   height: auto;
+  height: 48px;
+  width: auto;
 }
 
 .menu-header {
@@ -90,14 +80,14 @@ header {
 /* Navbar fijo y por encima */
 .menu-header .navbar {
   z-index: 9999;
-  background: linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.06));
+  background: transparent !important; /* transparente para ver el video debajo */
   padding: 0.45rem 1rem;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px); /* ligero desenfoque para legibilidad sin ocultar el video */
 }
 
 .menu-central {
-  background-color: var(--bg);
-  border-radius: 20px;
+  background-color: transparent !important;
+  border-radius: 0 !important;
 }
 
 .user-btn .btn {
@@ -394,13 +384,17 @@ header {
 .titulo-marcas {
   margin-top: 40px;
   margin-bottom: 40px;
+}
+
+.titulo-marcas .titulo {
   font-size: 2.5rem;
   color: var(--rojo-cocacola);
+  font-weight: bold;
 }
 
 .container-marcas h4.subtitulo-marcas {
-  font-size: 1.2rem;
-  color: #ffffffcc;
+  font-size: 1.3rem;
+  color: var(--bg);
   padding-bottom: 40px;
 }
 
@@ -415,7 +409,13 @@ header {
   border: none;
   background-color: transparent;
   position: relative;
-  scrollbar-width: none;   -ms-overflow-style: none;
+  scrollbar-width: none;   
+  -ms-overflow-style: none;
+}
+.scroll-text p {
+  margin-bottom: 15px;
+  line-height: 1.5;
+  color: var(--bg);
 }
 
 .scroll-text::-webkit-scrollbar {
@@ -431,6 +431,7 @@ header {
   font-size: 1rem;
   margin-bottom: 70px;
   transition: all 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .btn-vermas-marcas .btn-marcas:hover {
@@ -781,159 +782,83 @@ div.pane.expand .content {
 
 
 
-/* MÓVIL: hasta 576px */
-@media (max-width: 576px) {
-  .titulo-marcas { font-size: 1.6rem; }
-  .subtitulo-marcas { font-size: 0.95rem; }
-  .logo-img { height: 38px; }
-
-  .marquee-wrapper {
-    height: 40px;
-  }
-
-  .marquee-content img {
-    height: 40px;
-  }
-
-  .marquee {
-    transform: rotate(-10deg);
-  }
-
-  .marquee-detras {
-    transform: rotate(10deg);
-  }
-
-  .tarjetas {
-    padding-top: 200px;
-    align-items: center;
-  }
-
-  .footer-content {
-    margin: 0 auto;
-    max-width: 1230px;
-    padding: 40px 15px;
-    position: relative;
-  }
-
-  .footer-content-column {
-    width: 100%;
-  }
-
-  :root { --nav-height: 72px; }
-
-  .menu-header .navbar-collapse {
-    background: rgba(0,0,0,0.92);
-    padding: 1rem;
-    margin-top: 0.4rem;
-    border-radius: 8px;
-  }
-
-  .navbar-toggler {
-    border-color: rgba(255,255,255,0.15);
-  }
-
-  .lata-img { 
-    width: 140px; 
-  }
+/* Asegura altura del navbar y que no tape el contenido */
+:root { --nav-height: 72px; }
+/* eliminar/reemplazar segunda regla duplicada que añadía padding-top */
+body {
+  margin: 0;
+  padding: 0;
+  padding-top: 0;
 }
 
-/* TABLET: 577px a 991px */
-@media (min-width: 577px) and (max-width: 991px) {
-  .logo-img { height: 42px; }
+/* Ajustes de logo */
+.logo-img { height: 48px; width: auto; }
 
-  .footer-content {
-    margin: 0 auto;
-    max-width: 1230px;
-    padding: 40px 15px 1050px;
-    position: relative;
-    justify-content: space-between;
-  }
-
-  .footer-content-column {
-    width: 48%;
-    text-align: left;
-  }
-
-  :root { --nav-height: 72px; }
+/* Centrar el nav en pantallas grandes */
+.navbar-nav.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
 }
 
+/* Espaciado de enlaces y color */
+.navbar-nav .nav-link { padding: .45rem .75rem; color: #fff; }
 
-/* Responsive: tablet y móviles */
-@media (max-width: 991.98px) {
-  .container-marcas { padding-top: 76px; }
-  .titulo-marcas { font-size: 1.9rem; }
-  .subtitulo-marcas { font-size: 1rem; }
-}
-
-/* En pantallas pequeñas, apilar columnas y centrar imágenes/texto */
-@media (max-width: 767px) {
-   .menu-central ul {
-    flex-direction: column;
-    align-items: center;
-  }
-  .user-btn {
-    margin-top: 10px;
-  }
-  .row.section {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-  }
-
-  .seccion-marca, .img-marcas, .col-md-6 {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-
-  /* Hacer títulos y textos más grandes/legibles en móvil */
-  .section-title { font-size: 1.25rem; text-align: center; margin-bottom: 0.5rem; }
-  .scroll-text { max-height: none; overflow: visible; text-align: justify; }
-  .logo-img { height: 42px; }
-  .container-marcas { padding-top: 72px; padding-left: 1rem; padding-right: 1rem; }
-  .btn-marcas { width: 100%; }
-}
-
-
-/* DESKTOP: desde 992px */
-@media (min-width: 992px) {
-  .footer-content {
-    margin: 0 auto;
-    max-width: 1230px;
-    padding: 40px 15px;
-    position: relative;
-  }
-
-  .footer-wave-svg {
-    height: 50px;
-  }
-
-  .footer-content-column {
-    width: 24.99%;
-  }
-
-  :root { --nav-height: 72px; }
-}
-
-
-/* Ajustes generales */
-.container-marcas,
-.descubre-container,
-.tarjetas,
-.marquee-wrapper,
-.pg-footer {
-  margin-top: 0;
-}
-
-/* en móvil, dar fondo oscuro al collapse */
+/* En móvil, el collapse tendrá fondo oscuro para legibilidad */
 @media (max-width: 767.98px) {
   :root { --nav-height: 64px; }
   .menu-header .navbar-collapse {
-    background: rgba(0,0,0,0.92);
+    background: rgba(0,0,0,0.94);
     padding: 1rem;
-    margin-top: 0.4rem;
     border-radius: 8px;
   }
   .logo-img { height: 42px; }
-  .navbar-toggler { border-color: rgba(255,255,255,0.15); }
+}
+
+/* DESKTOP: desde 992px */
+@media (min-width: 992px) {
+  /* barra en sí transparente para no cubrir toda la anchura */
+  .menu-header .navbar {
+    background: transparent;
+    padding: 0.35rem 1rem;
+  }
+
+  /* ul centrada se convierte en la "isla" */
+  .navbar-nav.mx-auto {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(0,0,0,0.45); /* ajusta opacidad si quieres más/menos contraste */
+    padding: 0.35rem 1.25rem;
+    border-radius: 32px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+    max-width: 900px;     /* limita anchura de la isla */
+    width: auto;
+    margin: 0; /* quitar márgenes para posicionamiento absoluto */
+  }
+
+  /* Asegurar que brand y botón de usuario no queden detrás de la isla */
+  .navbar-brand, .d-flex.ms-auto {
+    position: relative;
+    z-index: 10002;
+  }
+}
+
+/* En móvil/tablests el positioning vuelve a normal para que collapse funcione */
+@media (max-width: 991.98px) {
+  .navbar-nav.mx-auto {
+    position: static;
+    transform: none;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    margin: 0 auto;
+  }
 }
 
