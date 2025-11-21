@@ -965,13 +965,14 @@ body {
   .panes {
     position:fixed;
     bottom:0; left:0; right:0;
-    width: 20%;
+    width: 0%;
     display:flex;
     flex-direction:column;
     justify-content:flex-start;
     background:#f8f8f8;
     border-top:1px solid #ccc;
     z-index:1000;
+    overflow: visible;
   }
 
   .pane {
@@ -996,25 +997,25 @@ body {
   .pane .content {
     display:none;
   }
-  /* .pane.expanded {
-    flex:100%;
-  } */
+  .pane.expanded {
+    height: auto;
+    overflow: visible;
+  }
 
   .pane.expanded .label {
     display:none; /* oculta el nombre */
   }
-  /* .pane.expanded .content {
-    display:block;
-    position:fixed;
-    left:0; right:0; bottom:64px; top:0;
-    background:#fff;
-    overflow-y:auto;
-    z-index:1100;
-    padding:1rem;
-    border-top-left-radius:16px;
-    border-top-right-radius:16px;
-    box-shadow:0 -4px 14px rgba(0,0,0,0.2);
-  } */
+
+  .pane.expanded .content {
+  display: block;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  }
+
+
+
   .container-marcas {
     padding-bottom: 0;}
 

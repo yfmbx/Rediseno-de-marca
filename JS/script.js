@@ -144,14 +144,10 @@ document.addEventListener("mousemove", e => {
 });
 
 document.querySelectorAll('.pane .label').forEach(label => {
-  label.addEventListener('click', function() {
+  label.addEventListener('click', function () {
     const pane = this.closest('.pane');
-    if (pane.classList.contains('expanded')) {
-      pane.classList.remove('expanded'); // vuelve a comprimirse
-    } else {
-      document.querySelectorAll('.pane').forEach(p => p.classList.remove('expanded'));
-      pane.classList.add('expanded'); // expande el seleccionado
-    }
+    document.querySelectorAll('.pane').forEach(p => p.classList.remove('expanded'));
+    pane.classList.add('expanded');
   });
 });
 
