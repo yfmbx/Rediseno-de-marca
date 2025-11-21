@@ -1,6 +1,7 @@
 :root{
   --bg: #0f1724;
   --muted: #94a3b8;
+  --accent: #06b6d4;
   --max-width: 1100px;
   --count-slides: 5;
   --compacted-width: 5%;
@@ -168,7 +169,7 @@ header {
   transform: scale(1.05);
   background-color: #fff;
   color: var(--bg);
-}
+}  
 /* MARQUEE */
 .marquee-wrapper {
   position: relative;
@@ -205,7 +206,7 @@ header {
   display: flex;
   gap: 100px;
   animation: scroll-reverse 15s linear infinite;
-} 
+}
 .marquee-content img, .marquee-content-detras img {
   height: 90px;
   width: auto;
@@ -215,10 +216,10 @@ header {
   display: block;
   border: none;
   transition: transform 0.3s ease;
-}  
+} 
 .marquee-content img:hover, .marquee-content-detras img:hover {
   transform: scale(1.1);
-} 
+}
 @keyframes scroll {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
@@ -230,7 +231,6 @@ header {
 .marquee:hover .marquee-content, .marquee-detras:hover .marquee-content-detras {
   animation-play-state: paused;
 }
-/* Tarjetas homepage */
 .tarjetas {
   justify-content: center;
 }
@@ -535,7 +535,7 @@ div.pane.expand .content {
 /* footer */
 .footer {
   background-color: #fe001a;
-    color:var(--bg);
+  color:var(--bg);
 }
 .footer-call-to-action-button {
   background-color: #fff;
@@ -766,12 +766,6 @@ body {
   }
 }
 @media (max-width: 767.98px) {
-  .content.container-fluid .col-md-8 h1 {
-    font-size: 1em;
-  }
-  .content.container-fluid .col-md-8 p {
-    font-size: 0.5em;
-  }
   .tarjetas .row {
     justify-content: center;
     gap: 1rem;
@@ -811,17 +805,15 @@ body {
     font-size: 0.95rem;
   }
   .panes {
-    position: fixed;
-    bottom: 0; 
-    left: 0; 
-    right: 0;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    background: #f8f8f8;
-    border-top: 1px solid #ccc;
-    z-index: 1000;
+    position:fixed;
+    bottom:0; left:0; right:0;
+    width: 0%;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    background:#f8f8f8;
+    border-top:1px solid #ccc;
+    z-index:1000;
     overflow: visible;
   }
   .pane {
