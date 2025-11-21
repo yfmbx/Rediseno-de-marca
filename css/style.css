@@ -117,10 +117,6 @@ header {
   border-radius: 30px;
 }
 
-.nav-item.dropdown:hover .dropdown-menu {
-  display: block;
-  margin-top: 0;
-}
 
 .nav-link {
   color: #fff;
@@ -863,6 +859,13 @@ body {
 
   }
 
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  }
+}
+
+
   /* ul centrada se convierte en la "isla" */
   .navbar-nav.mx-auto {
     position: absolute;
@@ -886,7 +889,7 @@ body {
     position: relative;
     z-index: 10002;
   }
-}
+
 
 /* En móvil/tablests el positioning vuelve a normal para que collapse funcione */
 @media (max-width: 991.98px) {
