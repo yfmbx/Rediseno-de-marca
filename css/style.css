@@ -126,7 +126,7 @@ header {
 
 .navbar-toggler {
   /* box-shadow: #000; */
-  color: #000;
+  color: #ffffff;
 }
 
 .navbar-toggler-icon {
@@ -426,7 +426,7 @@ header {
 .scroll-text p {
   margin-bottom: 15px;
   line-height: 1.5;
-  color: var(--bg);
+  color: #fff;
 }
 
 .scroll-text::-webkit-scrollbar {
@@ -815,22 +815,31 @@ body {
 }
 
 /* Espaciado de enlaces y color */
-.navbar-nav .nav-link { padding: .45rem .75rem; color: #fff; }
+.navbar-nav .nav-link { 
+  padding: .35rem .75rem; 
+  color: #fff; 
+}
 
 /* En móvil, el collapse tendrá fondo oscuro para legibilidad */
 @media (max-width: 767.98px) {
   :root { --nav-height: 64px; }
   .menu-header .navbar-collapse {
     background: rgba(0,0,0,0.94);
-    padding: 3rem;
+    padding: 2rem;
     border-radius: 8px;
-    width: 50px;
+    /* width: 50px; */
   }
   .logo-img { 
     height: 55px; 
     width: auto;
     margin-top: 10px;
     margin-bottom: 20px;
+  }
+  .scroll-text {
+    padding: 1.5rem;
+  }
+  .seccion-marca {
+    padding: 4rem;
   }
 }
 
