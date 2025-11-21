@@ -641,11 +641,6 @@ div.pane.expand .content {
   background-color: #fe001a; /* rojo Coca-Cola */
     color:var(--bg);
 }
-
-.footer-wave-path { 
-  fill: var()
-}
-
 .footer-call-to-action-button {
   background-color: #fff;       /* botón blanco */
   color: #fe001a;               /* texto rojo */
@@ -684,7 +679,7 @@ div.pane.expand .content {
   width: 100%;
 }
 .footer-wave-path {
-  fill: #fffff2;
+  fill: var(--bg);
 }
 
 .footer-content {
