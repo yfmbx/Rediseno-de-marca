@@ -17,47 +17,40 @@
         
     </head>
     <body>
-        <header class="menu-header">
-            <nav class="navbar navbar-expand-md navbar-dark fixed-top">
-                <div class="container-fluid">
-                <!-- Logo a la izquierda -->
-                <a class="navbar-brand" href="index.html">
-                    <img class="logo-img" src="imagen/logo-cocacola-blanco.png" alt="logo Coca-Cola">
-                </a>
 
-                <!-- Toggler -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegación">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+    <header class="menu-header">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img class="logo-img" src="imagen/logo-cocacola-blanco.png" alt="logo Coca-Cola">
+            </a>
 
-                <!-- Collapse: menú centrado + botón de usuario a la derecha -->
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav mx-auto justify-content-center">
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="marca.html">Marcas</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-white" href="#" id="discoverDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Descubre</a>
-                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="discoverDropdown">
-                            <li><a class="dropdown-item" href="#services">Impacto</a></li>
-                            <li><a class="dropdown-item" href="#service-web">Fanstore</a></li>
-                            <li><a class="dropdown-item" href="#service-design">CCME '25</a></li>
-                            <li><a class="dropdown-item" href="cocacola.html">Nuestros productos</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#contact">Contacto</a>
-                        </li>
-                    </ul>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Alternar navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-                    <!-- Botón de usuario/acción: empuja a la derecha cuando el collapse está expandido -->
-                    <div class="d-flex ms-auto">
-                        <button class="btn btn-outline-light">Iniciar Sesión</button>
-                    </div>
-                </div>
-                </div>
-            </nav>
-        </header>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a class="nav-link" href="marca.html">Marcas</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="discoverDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Descubre</a>
+              <ul class="dropdown-menu" aria-labelledby="discoverDropdown">
+                <li><a class="dropdown-item" href="#services">Impacto</a></li>
+                <li><a class="dropdown-item" href="#service-web">Fanstore</a></li>
+                <li><a class="dropdown-item" href="#service-design">CCME '25</a></li>
+                <li><a class="dropdown-item" href="cocacola.html">Nuestros productos</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+          </ul>
+
+            <div class="d-flex ms-auto">
+                <button class="btn btn-outline-light">Iniciar Sesión</button>
+            </div>
+        </div>
+        </div>
+        </nav>
+    </header>
 
         <div class="video-section">
             <video autoplay muted loop id="bg-video">
