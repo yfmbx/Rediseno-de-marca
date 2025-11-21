@@ -848,3 +848,54 @@ body {
   }
 }
 
+/* CENTRAR tarjetas en pantallas pequeñas */
+@media (max-width: 767.98px) {
+  /* Centrar fila de tarjetas */
+  .tarjetas .row {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  /* Cada columna ocupa 100% y su contenido (la tarjeta) se centra */
+  .tarjetas .col-md-4,
+  .tarjetas .col-md-3 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Tarjeta un pelín más grande en móvil (ajusta max-width si quieres) */
+  .tarjetas .card {
+    margin: 16px;
+    width: 100%;
+    max-width: 420px; /* antes 300/360 -> ahora un poco más grande */
+    height: auto;     /* permitir que el contenido ajuste la altura */
+    min-height: 320px;/* opcional: mantener una altura mínima visual */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .custom-card {
+    width: 100%;
+    max-width: 420px; /* coincide con .card */
+    margin: 0 auto;
+  }
+
+  /* Imágenes adaptables dentro de la tarjeta */
+  .custom-card .card-img-top,
+  .tarjetas .carousel img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Texto un poco más grande para mejor legibilidad en móvil */
+  .custom-card .card-body h5 {
+    font-size: 1.25rem;
+  }
+  .custom-card .card-body p {
+    font-size: 0.95rem;
+  }
+}
