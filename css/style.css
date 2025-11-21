@@ -411,7 +411,6 @@ header {
 
 .container-marcas h4.subtitulo-marcas {
   font-size: 1.3rem;
-  color: var(--bg);
   padding-bottom: 40px;
 }
 
@@ -901,6 +900,8 @@ body {
   }
   .seccion-marca {
     padding: 3rem;
+    padding-bottom: 0;
+    margin-bottom: 0;
   }
   .container-marcas h1.titulo-marcas {
     padding-left: 50px;
@@ -1011,4 +1012,25 @@ body {
     border-top-right-radius:16px;
     box-shadow:0 -4px 14px rgba(0,0,0,0.2);
   } */
+  .container-marcas {
+    padding-bottom: 0;}
+
+  .container-marcas h4.subtitulo-marcas {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 40px;
+  }
+  .row.section {
+    flex-direction: column; /* apila verticalmente */
+  }
+
+  .row.section .img-marcas {
+    order: -1;              /* coloca las imágenes primero */
+    margin-bottom: 1rem;    /* espacio debajo de la imagen */
+  }
+
+  .row.section .seccion-marca {
+    order: 0;               /* texto después */
+  }
+
 }
