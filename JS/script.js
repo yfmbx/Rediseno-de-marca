@@ -142,3 +142,15 @@ document.addEventListener("mousemove", e => {
   cursor.style.left = e.pageX + "px";
   cursor.style.top = e.pageY + "px";
 });
+
+document.querySelectorAll('.pane .label').forEach(label => {
+  label.addEventListener('click', function() {
+    const pane = this.closest('.pane');
+    if (pane.classList.contains('expanded')) {
+      pane.classList.remove('expanded'); // vuelve a comprimirse
+    } else {
+      document.querySelectorAll('.pane').forEach(p => p.classList.remove('expanded'));
+      pane.classList.add('expanded'); // expande el seleccionado
+    }
+  });
+});
