@@ -9,19 +9,23 @@
   --nav-height: 72px;
 }
 
+@font-face {
+  font-family: "TCCC-UnityHeadline-Medium"; src: url("/fonts/TCCC-UnityHeadline-Medium.ttf") format("truetype"); font-weight: normal; font-style: normal;
+}
+
 *{
   box-sizing: border-box;
-  font-family: "TCCC-UnityHeadline-Medium", sans-serif !important;
+  font-family: "TCCC-UnityHeadline-Medium", sans-serif;
+  font-family: "TCCC-UnityHeadline Regular", sans-serif !important;
   color: #fff;
 }
 
 body{
   margin: 0;
   padding: 0;
-  /* quitar espacio superior global */
   padding-top: 0;
   background-color: var(--bg);
-  font-family: "R", sans-serif;
+  font-family: "TCCC-UnityHeadline-Medium", sans-serif;
 }
 
 .cursor {
