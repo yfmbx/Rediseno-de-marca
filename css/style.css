@@ -422,7 +422,18 @@ header {
   position: relative;
   scrollbar-width: none;   
   -ms-overflow-style: none;
+   -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 80%, rgba(0,0,0,0));
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0));
+  mask-repeat: no-repeat;
+  mask-size: 100% 100%;
 }
+
+.scroll-text::-webkit-scrollbar {
+  display: none;
+}
+  
 .scroll-text p {
   margin-bottom: 15px;
   line-height: 1.5;
