@@ -1,25 +1,21 @@
 :root{
   --bg: #0f1724;
   --muted: #94a3b8;
-  --accent: #06b6d4;
   --max-width: 1100px;
   --count-slides: 5;
   --compacted-width: 5%;
   --rojo-cocacola: #fe001a;
   --nav-height: 72px;
 }
-
 @font-face {
   font-family: "TCCC-UnityHeadline-Medium"; src: url("/fonts/TCCC-UnityHeadline-Medium.ttf") format("truetype"); font-weight: normal; font-style: normal;
 }
-
 *{
   box-sizing: border-box;
   font-family: "TCCC-UnityHeadline-Medium", sans-serif;
   font-family: "TCCC-UnityHeadline Regular", sans-serif !important;
   color: #fff;
 }
-
 body{
   margin: 0;
   padding: 0;
@@ -27,7 +23,6 @@ body{
   background-color: var(--bg);
   font-family: "TCCC-UnityHeadline-Medium", sans-serif;
 }
-
 .cursor {
   position: fixed;
   width: 30px;
@@ -39,26 +34,22 @@ body{
   box-shadow: #ffffff45 0 0 8px 2px;
   z-index: 9999;
 }
-
 header {
   padding: 0 0;
   text-align: center;
 }
-
 .logo > img {
   width: 150px;
   height: auto;
   padding-left: 20px;
   padding-top: 10px;
 }
-
 .logo-img {
   width: 150px;
   height: auto;
   height: 48px;
   width: auto;
 }
-
 .menu-header {
   z-index: 9997;
   position: fixed;
@@ -67,20 +58,16 @@ header {
   left: 0;
   right: 0;
 }
-
-/* Navbar fijo y por encima */
 .menu-header .navbar {
   z-index: 9999;
-  background: transparent !important; /* transparente para ver el video debajo */
+  background: transparent !important;
   padding: 0.45rem 1rem;
-  backdrop-filter: blur(4px); /* ligero desenfoque para legibilidad sin ocultar el video */
+  backdrop-filter: blur(4px);
 }
-
 .menu-central {
   background-color: transparent !important;
   border-radius: 0 !important;
 }
-
 .d-flex.ms-auto .btn {
   background-color:var(--rojo-cocacola);   
   color: #fff;
@@ -89,14 +76,12 @@ header {
   border-radius: 24px;
   flex: auto;
 }
-
 .d-flex.ms-auto .btn:hover {
   box-shadow: 0 0 15px rgba(224, 85, 85, 0.7);
   transform: scale(1.05);
   color: white;
   background-color: var(--bg);
 }
-
 .dropdown-menu{
   background-color: var(--bg);
   border: none;
@@ -106,33 +91,25 @@ header {
   display: none;
   position: absolute;
 }
-
 .dropdown-item {
   color: #fff;
 }
-
 .dropdown-item:hover {
   background-color: var(--rojo-cocacola);
   color: #fff;
   border-radius: 30px;
 }
-
-
 .nav-link {
   color: #fff;
 }
-
 .nav-link:hover {
   color: #06b6d4;
 }
-
 .navbar-toggler {
-  /* box-shadow: #000; */
   color: #ffffff;
 }
-
 .navbar-toggler-icon {
-  background-image: none !important; /* quitar SVG por defecto */
+  background-image: none !important;
   width: 1.3em;
   height: 1.2em;
   position: relative;
@@ -146,18 +123,16 @@ header {
   display: block;
   width: 100%;
   height: 2px;
-  background: #ffffff; /* color negro */
-  box-shadow: 0 6px 0 0 #ffffff, 0 12px 0 0 #ffffff; /* crea las 3 barras */
+  background: #ffffff;
+  box-shadow: 0 6px 0 0 #ffffff, 0 12px 0 0 #ffffff;
   border-radius: 2px;
 }
-
 .video-section {
   width: 100%;
   height: 100vh;
   overflow: hidden;
   position: relative;
 }
-
 #bg-video {
   position: absolute;
   top: 0;
@@ -167,7 +142,6 @@ header {
   object-fit: cover;
   z-index: -1;
 }
-
 .img-lata {
   transform: rotate(10deg);
   transition: transform 0.45s ease;
@@ -176,11 +150,9 @@ header {
   margin: 0 auto;
   max-width: 1000px;
 }
-
 .img-lata:hover {
   transform: rotate(-10deg) scale(1.2);
 }
-
 .descubre-btn .btn {
   background-color: var(--rojo-cocacola);
   margin-top: 20px;
@@ -191,15 +163,12 @@ header {
   font-size: 1.2rem;
   transition: all 0.3s ease;
 }
-
 .descubre-btn .btn:hover {
   box-shadow: 0 0 15px rgba(224, 85, 85, 0.7);
   transform: scale(1.05);
   background-color: #fff;
   color: var(--bg);
 }
-
-  
 /* MARQUEE */
 .marquee-wrapper {
   position: relative;
@@ -209,8 +178,6 @@ header {
   gap: -60px;
   margin-top: 50px;
 }
-
-
 .marquee, .marquee-detras {
   position: absolute;
   display: flex;
@@ -222,28 +189,23 @@ header {
   white-space: nowrap;
   margin: 50px 0; 
 }
-
 .marquee {
   transform: rotate(-5deg);
   box-shadow: 0 0 10px #000000d1;
 }
-
 .marquee-detras {
   transform: rotate(5deg);    
 }
-
 .marquee-content {
   display: flex;
   gap: 100px;
   animation: scroll 15s linear infinite;
 }
-
 .marquee-content-detras {
   display: flex;
   gap: 100px;
   animation: scroll-reverse 15s linear infinite;
-}
-  
+} 
 .marquee-content img, .marquee-content-detras img {
   height: 90px;
   width: auto;
@@ -253,40 +215,31 @@ header {
   display: block;
   border: none;
   transition: transform 0.3s ease;
-}
-  
+}  
 .marquee-content img:hover, .marquee-content-detras img:hover {
   transform: scale(1.1);
-}
-  
+} 
 @keyframes scroll {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
-
 @keyframes scroll-reverse {
   0% { transform: translateX(-50%); }
   100% { transform: translateX(0); }
-}
-  
+} 
 .marquee:hover .marquee-content, .marquee-detras:hover .marquee-content-detras {
   animation-play-state: paused;
 }
-
-
 /* Tarjetas homepage */
-
 .tarjetas {
   justify-content: center;
 }
-
 .tarjetas .card {
   margin: 20px;
   width: 100%;
   height: 400px;
   max-width: 300px;
 }
-
 .custom-card {
   border: none;
   border-radius: 20px;
@@ -294,26 +247,22 @@ header {
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .custom-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 25px rgba(0,0,0,0.3);
 }
-
 .custom-card .card-img-top {
   width: 100%;
   height:auto;
   object-fit: cover;
   display: block;
 }
-
 .custom-card .card-body {
   text-align: center;
   background: linear-gradient(135deg, #fe001a, #ff4d6d);
   color: #fff;
   padding: 8px;
 }
-
 .custom-card .btn {
   background-color: #fff;
   color: #fe001a;
@@ -322,60 +271,49 @@ header {
   font-weight: bold;
   transition: all 0.3s ease;
 }
-
 .custom-card .btn:hover {
   background-color: #fe001a;
   color: #fff;
   box-shadow: 0 0 15px rgba(255,255,255,0.6);
   transform: scale(1.1);
 }
-
 .tarjetas .card img
 .tarjetas .carousel-inner img {
   height: 100%;
   object-fit: cover;
 }
-
 .tarjetas.row {
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
 }
-
 .tarjetas .col-md-5
 .tarjetas .col-md-3 {
   display: flex;
 }
-
 .tarjetas .carousel {
   flex: 1;
 }
-
 .tarjetas .carousel img,
 .tarjetas .card-img-top {
   height: 100%;
   object-fit: cover;
 }
-
 .tarjetas .row .col-md-3 .custom-card > img.card-img-top {
   height: 200px !important;
   object-fit: contain !important;
   width: 100%;
   display: block;
 }
-
 .card-body h5 {
   font-size: 1.2rem;
   font-weight: bold;
   margin: 15px;
 }
-
 .card-body p {
   font-size: 0.8rem;
   margin-bottom: 15px;
 }
-
-
 /* marcas */
 .container-marcas {
   max-width: var(--max-width);
@@ -384,36 +322,29 @@ header {
   padding-bottom: 30px;
   gap: 500px;
 }
-
 .container-marcas img {
   max-width: 400px;
   height: auto;
 }
-
 .section {
   margin-bottom: 80px;
 }
-
 .titulo-marcas {
   margin-top: 40px;
   margin-bottom: 40px;
 }
-
 .titulo-marcas .titulo {
   font-size: 2.5rem;
   color: var(--rojo-cocacola);
   font-weight: bold;
 }
-
 .container-marcas h4.subtitulo-marcas {
   font-size: 1.3rem;
   padding-bottom: 40px;
 }
-
 .seccion-marca {
   margin-bottom: 100px;
 }
-
 .scroll-text {
   max-height: 250px;
   overflow-y: auto;
@@ -430,21 +361,17 @@ header {
   mask-repeat: no-repeat;
   mask-size: 100% 100%;
 }
-
 .scroll-text::-webkit-scrollbar {
   display: none;
 }
-  
 .scroll-text p {
   margin-bottom: 15px;
   line-height: 1.5;
   color: #fff;
 }
-
 .scroll-text::-webkit-scrollbar {
   display: none;
 }
-
 .btn-vermas-marcas .btn-marcas {
   background-color: var(--rojo-cocacola);
   color: #fff;
@@ -456,15 +383,12 @@ header {
   transition: all 0.3s ease;
   font-family: 'Montserrat', sans-serif;
 }
-
 .btn-vermas-marcas .btn-marcas:hover {
   box-shadow: 0 0 15px rgba(224, 85, 85, 0.7);
   transform: scale(1.05);
   background-color: #fff;
   color: var(--bg);
 }
-
-
 /* PAGINA COCA-COLA  */
 div.panes {
   max-width: none;
@@ -475,8 +399,6 @@ div.panes {
   font-size: 0;
   overflow: hidden;
 }
-
-/* Cada slide */
 div.panes > div.pane {
   width: calc(100% / var(--count-slides));
   height: 100%;
@@ -488,23 +410,18 @@ div.panes > div.pane {
   background-position: center center;
   overflow: hidden;
 }
-
-/* Estado comprimido/expandido */
 div.panes.magic > div.pane {
   width: var(--compacted-width);
 }
 div.panes.magic > div.pane.expand {
   width: calc(100% - (var(--compacted-width) * (var(--count-slides) - 1)));
 }
-
 html, body {
   height: 100%;
   margin: 0;
   overflow-y: auto;
   overflow-x: hidden;
 }
-
-/* Contenido */
 div.pane .content {
   display: flex;
   flex-direction: row;
@@ -518,14 +435,11 @@ div.pane .content {
   color: #fff;
   transition: opacity .5s;
 }
-
 div.pane.expand .content {
   opacity: 1;
   transform: scale(1);
   backdrop-filter: blur(0px);
 }
-
-/* Extra desplegable */
 div.pane .content .extra {
   display: none;
   margin-top: 10px;
@@ -535,19 +449,13 @@ div.pane .content .extra {
   max-width: 450px;
   width: 100%;
 }
-
-/* Imagen */
 div.pane .content img {
   margin-left: 40px;
   transition: transform 0.4s ease;
 }
-
 div.pane .content img:hover {
   transform: rotate(-8deg) scale(1.05);
 }
-
-
-/* Texto */
 div.pane .content h1 {
   margin: 10px 0;
   font-size: 35px;
@@ -559,13 +467,10 @@ div.pane .content h2 {
   font-weight: 400;
   color: #fff;
 }
-
 div.pane .content p {
   font-size: 13px;
   max-width: 80%;
 }
-
-/* Botón desplegable */
 div.pane .content .toggle {
   background: #fff;
   border: none;
@@ -579,8 +484,6 @@ div.pane .content .toggle {
   min-width: 120px;
   text-align: center;
 }
-
-/* Texto horizontal encima de panes comprimidos */
 .pane .label {
   position: absolute;
   bottom: 30%;
@@ -599,22 +502,18 @@ div.pane .content .toggle {
   max-height: 20%;
   text-align: center;
 }
-
 .pane.expand .label {
   opacity: 0;
 }
-
 div.pane.expand .content {
   opacity: 1;
   transform: scale(1);
   filter: blur(0px);
   backdrop-filter: blur(25px);
 }
-
 .toggle-wrapper {
   position: relative;
 }
-
 .toggle-wrapper .extra {
   display: none;
   position: absolute;
@@ -628,48 +527,40 @@ div.pane.expand .content {
   width: 100%;
   z-index: 10;
 }
-
 #p1 { background-color: var(--rojo-cocacola) }
 #p2 { background-color: rgb(0, 0, 0); }
 #p3 { background-color: rgb(193, 194, 193); }
 #p4 { background-color: rgb(223, 174, 13); }
 #p5 { background-color: rgb(198, 154, 72); }
-
 /* footer */
-
 .footer {
-  background-color: #fe001a; /* rojo Coca-Cola */
+  background-color: #fe001a;
     color:var(--bg);
 }
 .footer-call-to-action-button {
-  background-color: #fff;       /* botón blanco */
-  color: #fe001a;               /* texto rojo */
+  background-color: #fff;
+  color: #fe001a;
 }
 .footer-call-to-action-button:hover {
-  background-color: #fe001a;    /* hover rojo */
+  background-color: #fe001a;
   color: #fff;
 }
-
-
 .footer-content {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around; /* reparte columnas */
-  align-items: flex-start;       /* alinea arriba */
+  justify-content: space-around;
+  align-items: flex-start;
   margin-left: auto;
   margin-right: auto;
   max-width: 1230px;
-  padding: 40px 15px;            /* quita el padding-bottom enorme */
+  padding: 40px 15px;
   position: relative;
 }
-
 .footer-content-column {
-  flex: 1 1 220px;   /* cada columna ocupa mínimo 220px */
+  flex: 1 1 220px;
   margin: 20px;
   box-sizing: border-box;
 }
-
-
 .footer-wave-svg {
   background-color: transparent;
   display: block;
@@ -681,7 +572,6 @@ div.pane.expand .content {
 .footer-wave-path {
   fill: var(--bg);
 }
-
 .footer-content {
   margin-left: auto;
   margin-right: auto;
@@ -689,7 +579,6 @@ div.pane.expand .content {
   padding: 40px 15px;
   position: relative;
 }
-
 .footer-content-column {
   box-sizing: border-box;
   float: left;
@@ -698,17 +587,14 @@ div.pane.expand .content {
   width: 100%;
   color: #fff;
 }
-
 .footer-content-column ul li a {
   color: #fff;
   text-decoration: none;
 }
-
 .footer-logo-link {
   display: inline-block;
   margin-bottom: 20px;
 }
-
 .footer-menu-name {
   color: #fffff2;
   font-size: 15px;
@@ -728,7 +614,6 @@ div.pane.expand .content {
 .footer-menu-list li {
   margin-top: 5px;
 }
-
 .footer-call-to-action-button:hover {
   background-color: #fffff2;
   color: #000000;
@@ -776,13 +661,11 @@ div.pane.expand .content {
   color: #fff;
   text-decoration: none;
 }
-
 .footer-copyright-wrapper {
   margin-left: auto;
   margin-right: auto;
   max-width: 1200px;
 }
-
 .footer-copyright-text {
   color: #fff;
   font-size: 13px;
@@ -791,28 +674,17 @@ div.pane.expand .content {
   margin-bottom: 0;
   margin-top: 0;
 }
-
 .footer-copyright-link {
   color: #fff;
   text-decoration: none;
 }
-
-
-
-
-/* Asegura altura del navbar y que no tape el contenido */
 :root { --nav-height: 72px; }
-/* eliminar/reemplazar segunda regla duplicada que añadía padding-top */
 body {
   margin: 0;
   padding: 0;
   padding-top: 0;
 }
-
-/* Ajustes de logo */
 .logo-img { height: 48px; width: auto; }
-
-/* Centrar el nav en pantallas grandes */
 .navbar-nav.mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -820,21 +692,16 @@ body {
   gap: 1.25rem;
   align-items: center;
 }
-
-/* Espaciado de enlaces y color */
 .navbar-nav .nav-link { 
   padding: .35rem .75rem; 
   color: #fff; 
 }
-
-/* En móvil, el collapse tendrá fondo oscuro para legibilidad */
 @media (max-width: 767.98px) {
   :root { --nav-height: 64px; }
   .menu-header .navbar-collapse {
     background: rgba(0,0,0,0.94);
     padding: 2rem;
     border-radius: 8px;
-    /* width: 50px; */
   }
   .logo-img { 
     height: 55px; 
@@ -849,49 +716,37 @@ body {
     padding: 4rem;
   }
 }
-
-/* DESKTOP: desde 992px */
 @media (min-width: 992px) {
-  /* barra en sí transparente para no cubrir toda la anchura */
   .menu-header .navbar {
     background: transparent;
     padding: 0.35rem 1rem;
 
   }
-
   .nav-item.dropdown:hover .dropdown-menu {
     display: block;
     margin-top: 0;
   }
 }
-
-
-  /* ul centrada se convierte en la "isla" */
-  .navbar-nav.mx-auto {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    display: inline-flex;
-    align-items: center;
-    gap: 1rem;
-    background: rgba(0,0,0,0.45); /* ajusta opacidad si quieres más/menos contraste */
-    padding: 0.35rem 1.25rem;
-    border-radius: 32px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.45);
-    max-width: 900px;     /* limita anchura de la isla */
-    width: auto;
-    margin: 0; /* quitar márgenes para posicionamiento absoluto */
-  }
-
-  /* Asegurar que brand y botón de usuario no queden detrás de la isla */
-  .navbar-brand, .d-flex.ms-auto {
-    position: relative;
-    z-index: 10002;
-  }
-
-
-/* En móvil/tablests el positioning vuelve a normal para que collapse funcione */
+.navbar-nav.mx-auto {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(0,0,0,0.45);
+  padding: 0.35rem 1.25rem;
+  border-radius: 32px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+  max-width: 900px;
+  width: auto;
+  margin: 0;
+}
+.navbar-brand, .d-flex.ms-auto {
+  position: relative;
+  z-index: 10002;
+}
 @media (max-width: 991.98px) {
   .navbar-nav.mx-auto {
     position: static;
@@ -910,16 +765,17 @@ body {
     padding-left: 50px;
   }
 }
-
-/* CENTRAR tarjetas en pantallas pequeñas */
 @media (max-width: 767.98px) {
-  /* Centrar fila de tarjetas */
+  .content.container-fluid .col-md-8 h1 {
+    font-size: 1em;
+  }
+  .content.container-fluid .col-md-8 p {
+    font-size: 0.5em;
+  }
   .tarjetas .row {
     justify-content: center;
     gap: 1rem;
   }
-
-  /* Cada columna ocupa 100% y su contenido (la tarjeta) se centra */
   .tarjetas .col-md-4,
   .tarjetas .col-md-3 {
     flex: 0 0 100%;
@@ -927,54 +783,47 @@ body {
     display: flex;
     justify-content: center;
   }
-
-  /* Tarjeta un pelín más grande en móvil (ajusta max-width si quieres) */
   .tarjetas .card {
     margin: 16px;
     width: 100%;
-    max-width: 420px; /* antes 300/360 -> ahora un poco más grande */
-    height: auto;     /* permitir que el contenido ajuste la altura */
-    min-height: 320px;/* opcional: mantener una altura mínima visual */
+    max-width: 420px;
+    height: auto;
+    min-height: 320px;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-
   .custom-card {
     width: 100%;
-    max-width: 420px; /* coincide con .card */
+    max-width: 420px;
     margin: 0 auto;
   }
-
-  /* Imágenes adaptables dentro de la tarjeta */
   .custom-card .card-img-top,
   .tarjetas .carousel img {
     width: 100%;
     height: auto;
     display: block;
   }
-
-  /* Texto un poco más grande para mejor legibilidad en móvil */
   .custom-card .card-body h5 {
     font-size: 1.25rem;
   }
   .custom-card .card-body p {
     font-size: 0.95rem;
   }
-
   .panes {
-    position:fixed;
-    bottom:0; left:0; right:0;
-    width: 0%;
-    display:flex;
-    flex-direction:column;
-    justify-content:flex-start;
-    background:#f8f8f8;
-    border-top:1px solid #ccc;
-    z-index:1000;
+    position: fixed;
+    bottom: 0; 
+    left: 0; 
+    right: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: #f8f8f8;
+    border-top: 1px solid #ccc;
+    z-index: 1000;
     overflow: visible;
   }
-
   .pane {
     flex:1;
     height:64px;
@@ -985,15 +834,12 @@ body {
     overflow:hidden;
     background: transparent;
   }
-
   .pane .label {
     font: size 0;;
     margin:0;
     pointer-events:auto;
     opacity:0;
   }
-
-  /* Oculta contenido dentro de la barra */
   .pane .content {
     display:none;
   }
@@ -1001,11 +847,9 @@ body {
     height: auto;
     overflow: visible;
   }
-
   .pane.expanded .label {
-    display:none; /* oculta el nombre */
+    display:none;
   }
-
   .pane.expanded .content {
   display: block;
   position: fixed;
@@ -1013,28 +857,22 @@ body {
   bottom: 0;
   left: 0;
   }
-
-
-
   .container-marcas {
-    padding-bottom: 0;}
-
+    padding-bottom: 0;
+  }
   .container-marcas h4.subtitulo-marcas {
     padding-left: 10%;
     padding-right: 10%;
     padding-bottom: 40px;
   }
   .row.section {
-    flex-direction: column; /* apila verticalmente */
+    flex-direction: column;
   }
-
   .row.section .img-marcas {
-    order: -1;              /* coloca las imágenes primero */
-    margin-bottom: 1rem;    /* espacio debajo de la imagen */
+    order: -1;
+    margin-bottom: 1rem;
   }
-
   .row.section .seccion-marca {
-    order: 0;               /* texto después */
+    order: 0;
   }
-
 }
