@@ -11,7 +11,7 @@
 
 *{
   box-sizing: border-box;
-  font-family: "TCCC-UnityHeadline Regular";
+  font-family: "TCCC-UnityHeadline-Medium", sans-serif !important;
   color: #fff;
 }
 
@@ -21,6 +21,7 @@ body{
   /* quitar espacio superior global */
   padding-top: 0;
   background-color: var(--bg);
+  font-family: "R", sans-serif;
 }
 
 .cursor {
